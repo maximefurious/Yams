@@ -1,0 +1,467 @@
+\hypertarget{_yams_8c_source}{}\doxysection{Yams.\+c}
+\mbox{\hyperlink{_yams_8c}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00011}00011 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00012}00012 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00013}00013 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00014}00014 \textcolor{preprocessor}{\#include <time.h>}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00019}\mbox{\hyperlink{_yams_8c_a0240ac851181b84ac374872dc5434ee4}{00019}} \textcolor{preprocessor}{\# define N 14}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00024}\mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{00024}} \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} \mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}}[\mbox{\hyperlink{_yams_8c_a0240ac851181b84ac374872dc5434ee4}{N}}];}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00029}\mbox{\hyperlink{_yams_8c_af316c33cc298530f245e8b55330e86b5}{00029}} \textcolor{preprocessor}{\# define D 5}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00034}\mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{00034}} \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} \mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}}[\mbox{\hyperlink{_yams_8c_af316c33cc298530f245e8b55330e86b5}{D}}];}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00040}\mbox{\hyperlink{_yams_8c_af180638971a2b4529c0097c091b31cf2}{00040}} \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{_yams_8c_af180638971a2b4529c0097c091b31cf2}{BONUS}} = 62;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00046}\mbox{\hyperlink{_yams_8c_a7cb8d8cadf7626fd6b4e2c4e1a001b24}{00046}} \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{_yams_8c_a7cb8d8cadf7626fd6b4e2c4e1a001b24}{PTS\_BONUS}} = 35;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00052}\mbox{\hyperlink{_yams_8c_a668ed452f14c36df7dda48b4aa7018b1}{00052}} \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{_yams_8c_a668ed452f14c36df7dda48b4aa7018b1}{FULL\_HOUSE}} = 25;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00058}\mbox{\hyperlink{_yams_8c_a37a457f9195991b618345ff5ef65e32d}{00058}} \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{_yams_8c_a37a457f9195991b618345ff5ef65e32d}{PETITE\_SUITE}} = 30;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00064}\mbox{\hyperlink{_yams_8c_ab89cb6caf072b94e7dd8dbed903d4528}{00064}} \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{_yams_8c_ab89cb6caf072b94e7dd8dbed903d4528}{GRANDE\_SUITE}} = 40;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00070}\mbox{\hyperlink{_yams_8c_a064740c1e92ebde1a0fccd5f6b74d9bf}{00070}} \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{_yams_8c_a064740c1e92ebde1a0fccd5f6b74d9bf}{YAMS}} = 50;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00076}\mbox{\hyperlink{_yams_8c_af7dbda7167e22cb3417c16f78061ad80}{00076}} \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{_yams_8c_af7dbda7167e22cb3417c16f78061ad80}{MAX}} = 3;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00082}\mbox{\hyperlink{_yams_8c_a1b6c75dce035faca03f2ae5a45821d26}{00082}} \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{_yams_8c_a1b6c75dce035faca03f2ae5a45821d26}{TOUR\_MAX}} = 13;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00088}\mbox{\hyperlink{_yams_8c_a10f68649bb3c79d75a65c6b6d5f4f0f5}{00088}} \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{_yams_8c_a10f68649bb3c79d75a65c6b6d5f4f0f5}{BORNE}} = 7; }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00094}\mbox{\hyperlink{_yams_8c_adadf5510efdc685ee52ae5ba2d6b2cbb}{00094}} \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{_yams_8c_adadf5510efdc685ee52ae5ba2d6b2cbb}{MAX\_DE}} = 5;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00096}00096 \textcolor{keywordtype}{char} \mbox{\hyperlink{_yams_8c_a51fe67d2bdad0debe4720ab4da5f3055}{proposeLanceDe}}(\textcolor{keywordtype}{char}[7]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00098}00098 \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_a7bbe66524593a94e6027fe6aff306715}{fpseudo}}(\textcolor{keywordtype}{char}[7]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00099}\mbox{\hyperlink{_yams_8c_a397c3308d76235c86a4233fb08436d70}{00099}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_a397c3308d76235c86a4233fb08436d70}{afficheGrille}}(\textcolor{keywordtype}{char}[7],\textcolor{keywordtype}{char}[7],\textcolor{keywordtype}{int}[],\textcolor{keywordtype}{int}[]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00100}\mbox{\hyperlink{_yams_8c_a1dbaade02a2afb469e55c7fc047b9635}{00100}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_a1dbaade02a2afb469e55c7fc047b9635}{init\_TabJ}}(\textcolor{keywordtype}{int}[]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00101}\mbox{\hyperlink{_yams_8c_ae51d40aa1b71f064dcd49e8a03ba172e}{00101}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_ae51d40aa1b71f064dcd49e8a03ba172e}{init\_TabD}}(\textcolor{keywordtype}{int}[]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00102}\mbox{\hyperlink{_yams_8c_ab169282f210fdbf14fabd7793dd31c11}{00102}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_ab169282f210fdbf14fabd7793dd31c11}{pLanceDe}}(\textcolor{keywordtype}{int}[],\textcolor{keywordtype}{int}[]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00103}00103 \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_a3e8d8c117fcb4674199f8cea1254d781}{afficheMenu}}(\textcolor{keywordtype}{int} *);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00104}\mbox{\hyperlink{_yams_8c_acfa851f9aadddf90142b0346562d999d}{00104}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_acfa851f9aadddf90142b0346562d999d}{pChoisirDe}}(\textcolor{keywordtype}{int}[],\textcolor{keywordtype}{int}[]); }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00105}\mbox{\hyperlink{_yams_8c_ad162eb6a809950181446b7a5d281bc5b}{00105}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_ad162eb6a809950181446b7a5d281bc5b}{triSelection}}(\textcolor{keywordtype}{int}[]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00106}\mbox{\hyperlink{_yams_8c_a5821c116cfddd307af269465ad0fa491}{00106}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_a5821c116cfddd307af269465ad0fa491}{affecterScore}}(\textcolor{keywordtype}{char}[7],\textcolor{keywordtype}{int}[],\textcolor{keywordtype}{int}[]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00107}\mbox{\hyperlink{_yams_8c_ae21e9b2fae90f2148a0d035f633396cf}{00107}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_ae21e9b2fae90f2148a0d035f633396cf}{afficherScore}}(\textcolor{keywordtype}{char}[7],\textcolor{keywordtype}{char}[7],\textcolor{keywordtype}{int}[],\textcolor{keywordtype}{int}[]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00115}\mbox{\hyperlink{_yams_8c_a51fe67d2bdad0debe4720ab4da5f3055}{00115}} \textcolor{keywordtype}{char} \mbox{\hyperlink{_yams_8c_a51fe67d2bdad0debe4720ab4da5f3055}{proposeLanceDe}}(\textcolor{keywordtype}{char} pseudo[7])\{ \textcolor{comment}{// demande à l'utilisateur s'il veut lancer les dés }}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00116}00116     \textcolor{keywordtype}{char} rep;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00117}00117     printf(\textcolor{stringliteral}{"{}Voulez-\/vous lance les des \%s ? (o/n)\(\backslash\)n"{}},pseudo);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00118}00118     scanf(\textcolor{stringliteral}{"{} \%c"{}},\&rep);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00119}00119     printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00120}00120     \textcolor{keywordflow}{return} rep;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00121}00121 \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00122}00122 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00129}\mbox{\hyperlink{_yams_8c_a7bbe66524593a94e6027fe6aff306715}{00129}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_a7bbe66524593a94e6027fe6aff306715}{fpseudo}}(\textcolor{keywordtype}{char} pseudo[7])\{ }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00130}00130     \textcolor{keywordflow}{do}\{ \textcolor{comment}{// boucle répéter si le pseudo dépasse}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00131}00131         printf(\textcolor{stringliteral}{"{}Veuillez saisir un pseudo\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00132}00132         scanf(\textcolor{stringliteral}{"{}\%s"{}},pseudo);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00133}00133         printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00134}00134     \} \textcolor{keywordflow}{while} (strlen(pseudo)>=7); \textcolor{comment}{// vérification de la longueur}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00135}00135 \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00136}00136 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00145}\mbox{\hyperlink{_yams_8c_ac69ca8fb94ded0027bb185d61bfff12d}{00145}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_a397c3308d76235c86a4233fb08436d70}{afficheGrille}}(\textcolor{keywordtype}{char} pseudo1[7],\textcolor{keywordtype}{char} pseudo2[7],\mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}} j1,\mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}} j2)\{ \textcolor{comment}{// affiche la grille de jeu}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00146}00146     \textcolor{keywordtype}{int} somme1J1=0,somme1J2=0; \textcolor{comment}{// variable des sommes de la première partie de la grille}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00147}00147     \textcolor{keywordtype}{int} somme2J1=0,somme2J2=0; \textcolor{comment}{// variable des sommes de la secondes partie de la grille}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00148}00148     \textcolor{keywordtype}{int} somme3J1=0,somme3J2=0; \textcolor{comment}{// variable des sommes de toute la grille}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00149}00149     \textcolor{keywordtype}{int} i;    }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00151}00151     \textcolor{keywordflow}{for} (i = 0; i < 7; i++)\{ \textcolor{comment}{// boucle qui fait la somme des éléments de la première partie de la grille }}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00152}00152         \textcolor{keywordflow}{if} (j1[i]!=-\/1 \&\& j2[i]!=-\/1)\{ \textcolor{comment}{// vérification que les 2 cellules des tableaux des joeuurs ne soit pas blocké}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00153}00153             somme1J1= somme1J1 + j1[i]; }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00154}00154             somme1J2= somme1J2 + j2[i];}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00155}00155         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (j1[i]==-\/1 \&\& j2[i]!=-\/1)\{ \textcolor{comment}{// vérification que la cellule du joueur 1 soit blocké}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00156}00156             somme1J2= somme1J2 + j2[i];}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00157}00157         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (j1[i]!=-\/1 \&\& j2[i]==-\/1)\{ \textcolor{comment}{// vérification que la cellule du joueur 2 soit blocké}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00158}00158             somme1J1= somme1J1 + j1[i]; }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00159}00159         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00160}00160     \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00161}00161     \textcolor{keywordflow}{for} (i = 7; i < \mbox{\hyperlink{_yams_8c_a0240ac851181b84ac374872dc5434ee4}{N}}; i++)\{ \textcolor{comment}{// boucle qui fait la somme des éléments de la seconde partie de la grille}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00162}00162         \textcolor{keywordflow}{if} (j1[i]!=-\/1 \&\& j2[i]!=-\/1)\{ \textcolor{comment}{// vérification que les 2 cellules des tableaux des joeuurs ne soit pas blocké}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00163}00163             somme2J1= somme2J1 + j1[i]; }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00164}00164             somme2J2= somme2J2 + j2[i];}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00165}00165         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (j1[i]==-\/1 \&\& j2[i]!=-\/1)\{ \textcolor{comment}{// vérification que la cellule du joueur 1 soit blocké}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00166}00166             somme2J2= somme2J2 + j2[i];}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00167}00167         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (j1[i]!=-\/1 \&\& j2[i]==-\/1)\{ \textcolor{comment}{// vérification que la cellule du joueur 2 soit blocké}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00168}00168             somme2J1= somme2J1 + j1[i]; }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00169}00169         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00170}00170     \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00171}00171     somme3J1 = somme1J1 + somme2J1; \textcolor{comment}{// affectation de la variable somme total du joueur 1}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00172}00172     somme3J2 = somme1J2 + somme2J2; \textcolor{comment}{// affectation de la variable somme total du joueur 2}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00173}00173 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00174}00174     \textcolor{comment}{// grille du yams}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00175}00175     printf(\textcolor{stringliteral}{"{} \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00176}00176     printf(\textcolor{stringliteral}{"{}|         Yams        |\%6s|\%6s|\(\backslash\)n"{}},pseudo1,pseudo2);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00177}00177     printf(\textcolor{stringliteral}{"{}|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_|\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00178}00178     printf(\textcolor{stringliteral}{"{}|1 [total de 1]       |\%6d|\%6d|\(\backslash\)n"{}},j1[0],j2[0]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00179}00179     printf(\textcolor{stringliteral}{"{}|2 [total de 2]       |\%6d|\%6d|\(\backslash\)n"{}},j1[1],j2[1]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00180}00180     printf(\textcolor{stringliteral}{"{}|3 [total de 3]       |\%6d|\%6d|\(\backslash\)n"{}},j1[2],j2[2]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00181}00181     printf(\textcolor{stringliteral}{"{}|4 [total de 4]       |\%6d|\%6d|\(\backslash\)n"{}},j1[3],j2[3]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00182}00182     printf(\textcolor{stringliteral}{"{}|5 [total de 5]       |\%6d|\%6d|\(\backslash\)n"{}},j1[4],j2[4]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00183}00183     printf(\textcolor{stringliteral}{"{}|6 [total de 6]       |\%6d|\%6d|\(\backslash\)n"{}},j1[5],j2[5]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00184}00184     printf(\textcolor{stringliteral}{"{}|Bonus si > a 62 [35] |\%6d|\%6d|\(\backslash\)n"{}},j1[6],j2[6]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00185}00185     printf(\textcolor{stringliteral}{"{}|Total superieur      |\%6d|\%6d|\(\backslash\)n"{}},somme1J1,somme1J2);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00186}00186     printf(\textcolor{stringliteral}{"{}|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_|\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00187}00187     printf(\textcolor{stringliteral}{"{}|Brelan       [total] |\%6d|\%6d|\(\backslash\)n"{}},j1[7],j2[7]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00188}00188     printf(\textcolor{stringliteral}{"{}|Carre        [total] |\%6d|\%6d|\(\backslash\)n"{}},j1[8],j2[8]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00189}00189     printf(\textcolor{stringliteral}{"{}|Full House   [25]    |\%6d|\%6d|\(\backslash\)n"{}},j1[9],j2[9]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00190}00190     printf(\textcolor{stringliteral}{"{}|Petite suite [30]    |\%6d|\%6d|\(\backslash\)n"{}},j1[10],j2[10]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00191}00191     printf(\textcolor{stringliteral}{"{}|Grande suite [40]    |\%6d|\%6d|\(\backslash\)n"{}},j1[11],j2[11]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00192}00192     printf(\textcolor{stringliteral}{"{}|Yams         [50]    |\%6d|\%6d|\(\backslash\)n"{}},j1[12],j2[12]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00193}00193     printf(\textcolor{stringliteral}{"{}|Chance       [total] |\%6d|\%6d|\(\backslash\)n"{}},j1[13],j2[13]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00194}00194     printf(\textcolor{stringliteral}{"{}|Total superieur      |\%6d|\%6d|\(\backslash\)n"{}},somme2J1,somme2J2);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00195}00195     printf(\textcolor{stringliteral}{"{}|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_|\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00196}00196     printf(\textcolor{stringliteral}{"{}|Total                |\%6d|\%6d|\(\backslash\)n"{}},somme3J1,somme3J2);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00197}00197     printf(\textcolor{stringliteral}{"{}|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_|\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00198}00198     printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00199}00199 \} }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00200}00200 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00206}\mbox{\hyperlink{_yams_8c_aecc9eb380dd5e923180fb2e19e31854a}{00206}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_a1dbaade02a2afb469e55c7fc047b9635}{init\_TabJ}}(\mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}} tab)\{ }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00207}00207     \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00208}00208     \textcolor{keywordflow}{for} (i = 0; i < \mbox{\hyperlink{_yams_8c_a0240ac851181b84ac374872dc5434ee4}{N}}; i++)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00209}00209         tab[i]=0;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00210}00210     \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00211}00211 \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00212}00212 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00218}\mbox{\hyperlink{_yams_8c_afaed202ae743e019fca22487470bc6d1}{00218}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_ae51d40aa1b71f064dcd49e8a03ba172e}{init\_TabD}}(\mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}} tab)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00219}00219     \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00220}00220     \textcolor{keywordflow}{for} (i = 0; i < \mbox{\hyperlink{_yams_8c_af316c33cc298530f245e8b55330e86b5}{D}}; i++)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00221}00221         tab[i]=0;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00222}00222     \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00223}00223 \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00224}00224 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00231}\mbox{\hyperlink{_yams_8c_acbdc0d2d2f3ef58ed9ecb33330e8823b}{00231}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_ab169282f210fdbf14fabd7793dd31c11}{pLanceDe}}(\mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}} tabDeCourant,\mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}} tabDeRetenu)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00232}00232     \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00233}00233     srand(time(NULL)); \textcolor{comment}{// initialisation du nombre aléatoire en fonction de l'heure}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00234}00234     \mbox{\hyperlink{_yams_8c_ae51d40aa1b71f064dcd49e8a03ba172e}{init\_TabD}}(tabDeCourant); \textcolor{comment}{// reinitialise le tableau des dé courant }}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00235}00235     \textcolor{keywordflow}{for} (i = 0; i < \mbox{\hyperlink{_yams_8c_adadf5510efdc685ee52ae5ba2d6b2cbb}{MAX\_DE}}; i++)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00236}00236         tabDeCourant[i]=tabDeRetenu[i];}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00237}00237         \textcolor{keywordflow}{if} (tabDeCourant[i]==0)\{ \textcolor{comment}{// vérification que la valeur du tableau soit bien une valeur non sauvegardé}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00238}00238             tabDeCourant[i] = rand() \% \mbox{\hyperlink{_yams_8c_a10f68649bb3c79d75a65c6b6d5f4f0f5}{BORNE}}; \textcolor{comment}{// insert une varleur aléatoire dans }}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00239}00239             \textcolor{keywordflow}{while} (tabDeCourant[i]==0)\{ \textcolor{comment}{// boucle permettant de regénérer un nombre aléatoire si le nombre générer est 0}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00240}00240                 tabDeCourant[i] = rand() \% \mbox{\hyperlink{_yams_8c_a10f68649bb3c79d75a65c6b6d5f4f0f5}{BORNE}};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00241}00241             \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00242}00242         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00243}00243         printf(\textcolor{stringliteral}{"{}de \%d: \%d\(\backslash\)n"{}},i+1,tabDeCourant[i]); \textcolor{comment}{// affiche le dé }}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00244}00244     \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00245}00245     \mbox{\hyperlink{_yams_8c_ae51d40aa1b71f064dcd49e8a03ba172e}{init\_TabD}}(tabDeRetenu); \textcolor{comment}{// reinitialise le tableau des dé retenu   }}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00246}00246     printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00247}00247 \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00248}00248 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00254}\mbox{\hyperlink{_yams_8c_a3e8d8c117fcb4674199f8cea1254d781}{00254}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_a3e8d8c117fcb4674199f8cea1254d781}{afficheMenu}}(\textcolor{keywordtype}{int} *reponse)\{ }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00255}00255     printf(\textcolor{stringliteral}{"{}Que choisissez vous ? \(\backslash\)n1 -\/ Garder tout les des \(\backslash\)n2 -\/ Relancer Certains des\(\backslash\)n3 -\/ Relancer tout les des\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00256}00256     scanf(\textcolor{stringliteral}{"{}\%d"{}},reponse);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00257}00257     printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00258}00258 \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00259}00259 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00266}\mbox{\hyperlink{_yams_8c_ab22fc1c793cddf5affc7dd7fdb887e9e}{00266}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_acfa851f9aadddf90142b0346562d999d}{pChoisirDe}}(\mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}} tabDeCourant,\mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}} tabDeRetenu)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00267}00267     \textcolor{keywordtype}{int} a,i=0;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00268}00268     \textcolor{keywordtype}{int} tmp;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00269}00269     \mbox{\hyperlink{_yams_8c_ae51d40aa1b71f064dcd49e8a03ba172e}{init\_TabD}}(tabDeRetenu); \textcolor{comment}{// reinitialise le tableau des dé retenu   }}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00270}00270     printf(\textcolor{stringliteral}{"{}Veuillez choisir les des a concerver... (terminer la selection par 0 sauf si vous choisissez tous les dés) \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00271}00271     \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00272}00272         scanf(\textcolor{stringliteral}{"{}\%d"{}},\&a);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00273}00273         \textcolor{keywordflow}{if} (a!=0)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00274}00274             tmp = tabDeCourant[a-\/1];}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00275}00275             tabDeRetenu[a-\/1]=tmp;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00276}00276         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00277}00277         i++;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00278}00278     \} \textcolor{keywordflow}{while} ((i<5) \&\& (a!=0));}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00279}00279     printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00280}00280 \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00281}00281 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00287}\mbox{\hyperlink{_yams_8c_a537fa638da0e01efa64b700640215d42}{00287}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_ad162eb6a809950181446b7a5d281bc5b}{triSelection}}(\mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}} tabDeCourant)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00288}00288     \textcolor{keywordtype}{int} i,j,min,indmin;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00289}00289     \textcolor{keywordtype}{int} tmp;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00290}00290     \textcolor{keywordflow}{for}(i=0;i<\mbox{\hyperlink{_yams_8c_af316c33cc298530f245e8b55330e86b5}{D}}-\/1;i++)\{ \textcolor{comment}{// boucle qui parcours le tableau}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00291}00291         min=tabDeCourant[i];}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00292}00292         indmin=i;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00293}00293         \textcolor{keywordflow}{for}(j=i+1;j<\mbox{\hyperlink{_yams_8c_af316c33cc298530f245e8b55330e86b5}{D}};j++)\{ \textcolor{comment}{// boucle qui parcours le tableau}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00294}00294             \textcolor{keywordflow}{if} (tabDeCourant[j]<min)\{ \textcolor{comment}{// vérification que le minimum soit plus petit que l'entier courant}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00295}00295             min=tabDeCourant[j]; \textcolor{comment}{// affectation de l'entier courant si le minimum est plus grand}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00296}00296             indmin=j; }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00297}00297             \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00298}00298         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00299}00299         tmp=tabDeCourant[i]; \textcolor{comment}{// permet l'échange de 2 cellules d'un tableau}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00300}00300         tabDeCourant[i]=tabDeCourant[indmin]; }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00301}00301         tabDeCourant[indmin]=tmp;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00302}00302     \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00303}00303 \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00304}00304 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00312}\mbox{\hyperlink{_yams_8c_a42341aa79e61b1d0862e31b4c8737135}{00312}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_a5821c116cfddd307af269465ad0fa491}{affecterScore}}(\textcolor{keywordtype}{char} pseudo[7],\mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}} tabJ,\mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}} tabDeCourant)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00313}00313     \textcolor{keywordtype}{int} i=0;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00314}00314     \textcolor{keywordtype}{int} reponse;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00315}00315     \textcolor{keywordtype}{int} somme=0;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00316}00316     \textcolor{keywordtype}{int} compt1=0;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00317}00317     \textcolor{keywordtype}{int} bonus=0;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00318}00318     \textcolor{keywordflow}{do}\{ \textcolor{comment}{// demande à l'utilisateur de saisir une cellule ou inserer le score en vérifiant que la valeur saisit soit supérieur ou égale à 0 et inférieur à 14}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00319}00319         printf(\textcolor{stringliteral}{"{}Quelle ligne du tableau choisisez vous ?\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00320}00320         printf(\textcolor{stringliteral}{"{}Pour rappel voici les combinaison :\(\backslash\)n1-\/1 / 2-\/2 / 3-\/3 / 4-\/4 / 5-\/5 / 6-\/6 / 8-\/Brelan / 9-\/Carre / 10-\/Full House / 11-\/Petit\_suite / 12-\/Grande suite / 13-\/YAMS / 14-\/Chance / un autre nombre si rien\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00321}00321         scanf(\textcolor{stringliteral}{"{}\%d"{}},\&reponse);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00322}00322         \textcolor{keywordflow}{if} (tabJ[reponse-\/1]!=0)\{ \textcolor{comment}{// verification que la cellule du tableau ou le joueur veux entrez son score ne soit pas déjà rempli}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00323}00323             printf(\textcolor{stringliteral}{"{}Erreur vous avez tentez d'inserez un score deja present dans le tableau\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00324}00324             \mbox{\hyperlink{_yams_8c_a5821c116cfddd307af269465ad0fa491}{affecterScore}}(pseudo,tabJ,tabDeCourant); \textcolor{comment}{// relance la procédure}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00325}00325         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00326}00326     \} \textcolor{keywordflow}{while} (reponse <=0 \&\& reponse>\mbox{\hyperlink{_yams_8c_a0240ac851181b84ac374872dc5434ee4}{N}}); }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00327}00327     \textcolor{keywordflow}{if} (reponse < 7)\{ \textcolor{comment}{// si la réponse correspond à la somme des dés (les 6 premières cellules de la grille)}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00328}00328         \textcolor{keywordflow}{for} (i = 0; i < \mbox{\hyperlink{_yams_8c_adadf5510efdc685ee52ae5ba2d6b2cbb}{MAX\_DE}}; i++)\{ \textcolor{comment}{// parcours le tableau }}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00329}00329             \textcolor{keywordflow}{if} (tabDeCourant[i]==reponse )\{ \textcolor{comment}{// vérifie que la valeur de la cellule soit égale à la valeurs demandé par l'utilisateur }}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00330}00330                 somme=somme+tabDeCourant[i]; \textcolor{comment}{// fait la somme}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00331}00331             \}  }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00332}00332         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00333}00333     \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00334}00334     \textcolor{keywordflow}{for} (i = 0; i < 7; i++)\{ \textcolor{comment}{// boucle qui parcours les 6 premières cellules du tableau}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00335}00335        bonus = tabJ[i] + bonus; \textcolor{comment}{// fait la somme des valeurs des cellules de tabJ en fonction de i}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00336}00336     \}\textcolor{keywordflow}{if} (bonus>=\mbox{\hyperlink{_yams_8c_af180638971a2b4529c0097c091b31cf2}{BONUS}})\{ \textcolor{comment}{// vérification que la somme des valeurs des cellules soit supérieurs ou églae à la constante BONUS qui vaux 62}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00337}00337         tabJ[6]=\mbox{\hyperlink{_yams_8c_a7cb8d8cadf7626fd6b4e2c4e1a001b24}{PTS\_BONUS}}; \textcolor{comment}{// affectation si de la constante PTS\_BONUS}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00338}00338     \}  }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00339}00339     \textcolor{keywordflow}{switch} (reponse)}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00340}00340     \{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00341}00341     \textcolor{keywordflow}{case} 0:}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00342}00342         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00343}00343     \textcolor{keywordflow}{case} 1: \textcolor{comment}{// cellule 1}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00344}00344         \textcolor{keywordflow}{if} (somme==0)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00345}00345             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00346}00346         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tabJ[3]==-\/1)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00347}00347             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00348}00348         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00349}00349         tabJ[0]=somme; \textcolor{comment}{// insertion de la somme à la case prévue}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00350}00350         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00351}00351     \textcolor{keywordflow}{case} 2: \textcolor{comment}{// cellule 2}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00352}00352         \textcolor{keywordflow}{if} (somme==0)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00353}00353             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00354}00354         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tabJ[3]==-\/1)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00355}00355             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00356}00356         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00357}00357         tabJ[1]=somme; \textcolor{comment}{// insertion de la somme à la case prévue}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00358}00358         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00359}00359     \textcolor{keywordflow}{case} 3: \textcolor{comment}{// cellule 3}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00360}00360         \textcolor{keywordflow}{if} (somme==0)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00361}00361             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00362}00362         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tabJ[3]==-\/1)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00363}00363             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00364}00364         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00365}00365         tabJ[2]=somme; \textcolor{comment}{// insertion de la somme à la case prévue}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00366}00366         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00367}00367     \textcolor{keywordflow}{case} 4: \textcolor{comment}{// cellule 4}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00368}00368         \textcolor{keywordflow}{if} (somme==0)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00369}00369             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00370}00370         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tabJ[3]==-\/1)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00371}00371             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00372}00372         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00373}00373         tabJ[3]=somme; \textcolor{comment}{// insertion de la somme à la case prévue}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00374}00374         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00375}00375     \textcolor{keywordflow}{case} 5: \textcolor{comment}{// cellule 5}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00376}00376         \textcolor{keywordflow}{if} (somme==0)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00377}00377             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00378}00378         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tabJ[4]==-\/1)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00379}00379             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00380}00380         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00381}00381         tabJ[4]=somme; \textcolor{comment}{// insertion de la somme à la case prévue}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00382}00382         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00383}00383     \textcolor{keywordflow}{case} 6: \textcolor{comment}{// cellule 6}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00384}00384         \textcolor{keywordflow}{if} (somme==0)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00385}00385             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00386}00386         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tabJ[5]==-\/1)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00387}00387             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00388}00388         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00389}00389         tabJ[5]=somme; \textcolor{comment}{// insertion de la somme à la case prévue}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00390}00390         printf(\textcolor{stringliteral}{"{}\%d"{}},tabJ[5]);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00391}00391         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00392}00392     \textcolor{keywordflow}{case} 8:}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00393}00393         \mbox{\hyperlink{_yams_8c_ad162eb6a809950181446b7a5d281bc5b}{triSelection}}(tabDeCourant); \textcolor{comment}{// tri le tableau courant des dés par séléction et par ordre croissant}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00394}00394         \textcolor{keywordflow}{for} (i = 0; i < 3; i++)\{ \textcolor{comment}{// parcours le tabeau jusqu'à 3}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00395}00395             \textcolor{keywordflow}{if} (tabDeCourant[i]==tabDeCourant[i+1] \&\& tabDeCourant[i]==tabDeCourant[i+2])\{ \textcolor{comment}{// vérification de i à i+2 que les valeurs sont égale}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00396}00396                 somme = tabDeCourant[i]*3; \textcolor{comment}{// fait multiplication par 3 de la cellule i qui donne un brelan}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00397}00397             \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00398}00398         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00399}00399         \textcolor{keywordflow}{if} (somme==0)\{ \textcolor{comment}{// vérification que la somme est nul et si oui, affiche une message d'erreur}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00400}00400             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00401}00401         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tabJ[7]==-\/1)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00402}00402             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00403}00403         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00404}00404         tabJ[7]=somme; \textcolor{comment}{// insertion de la somme dans la cellule prévue}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00405}00405         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00406}00406     \textcolor{keywordflow}{case} 9:}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00407}00407         \mbox{\hyperlink{_yams_8c_ad162eb6a809950181446b7a5d281bc5b}{triSelection}}(tabDeCourant); \textcolor{comment}{// tri le tableau courant des dés par séléction et par ordre croissant}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00408}00408         \textcolor{keywordflow}{for} (i = 0; i < 2; i++)\{ \textcolor{comment}{// parcours le tableau jusqu'à 2}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00409}00409            \textcolor{keywordflow}{if} (tabDeCourant[i]==tabDeCourant[i+1] \&\& tabDeCourant[i]==tabDeCourant[i+2] \&\& tabDeCourant[i]==tabDeCourant[i+3])\{ \textcolor{comment}{// vérifie que les valeurs de i à i+3 sont identique}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00410}00410                 somme = tabDeCourant[i]*4; \textcolor{comment}{// multiplie par 4 la valeurs de la cellule répété 4 fois}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00411}00411             \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00412}00412         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00413}00413         \textcolor{keywordflow}{if} (somme==0)\{ \textcolor{comment}{// vérification que la somme est nul et si oui, affiche une message d'erreur}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00414}00414             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00415}00415         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tabJ[8]==-\/1)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00416}00416             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00417}00417         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00418}00418         tabJ[8]=somme; \textcolor{comment}{// insertion de la somme dans la cellule prévue}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00419}00419         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00420}00420     \textcolor{keywordflow}{case} 10:}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00421}00421         \mbox{\hyperlink{_yams_8c_ad162eb6a809950181446b7a5d281bc5b}{triSelection}}(tabDeCourant); \textcolor{comment}{// tri le tableau courant des dés par séléction et par ordre croissant}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00422}00422         \textcolor{keywordflow}{for} (i = 0; i < \mbox{\hyperlink{_yams_8c_af316c33cc298530f245e8b55330e86b5}{D}}-\/1; i++)\{ \textcolor{comment}{// boucle qui parcours le tableau}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00423}00423             \textcolor{keywordflow}{if} (tabDeCourant[i]==tabDeCourant[i+1])\{ \textcolor{comment}{// vérification des premiers nombre identique du full house}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00424}00424                 compt1=compt1+1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00425}00425             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(tabDeCourant[i+1]==tabDeCourant[i+2])\{ \textcolor{comment}{//vérification de la seconde partie des nombres du full house}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00426}00426                 compt1=compt1+1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00427}00427             \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00428}00428         \}\textcolor{keywordflow}{if} (compt1==4)\{ \textcolor{comment}{// vérification qu'il y ait la bonne combinaison }}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00429}00429             somme=\mbox{\hyperlink{_yams_8c_a668ed452f14c36df7dda48b4aa7018b1}{FULL\_HOUSE}};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00430}00430         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tabJ[9]==-\/1)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00431}00431             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00432}00432         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00433}00433             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00434}00434         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00435}00435         tabJ[9]=somme; \textcolor{comment}{// insertion de la somme dans la cellule prévue}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00436}00436         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00437}00437     \textcolor{keywordflow}{case} 11:}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00438}00438         \mbox{\hyperlink{_yams_8c_ad162eb6a809950181446b7a5d281bc5b}{triSelection}}(tabDeCourant); \textcolor{comment}{// tri le tableau courant des dés par séléction et par ordre croissant}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00439}00439         \textcolor{keywordflow}{for} (i = 0; i < \mbox{\hyperlink{_yams_8c_adadf5510efdc685ee52ae5ba2d6b2cbb}{MAX\_DE}}; i++)\{ \textcolor{comment}{// boucle qui parcours le tableau}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00440}00440             \textcolor{keywordflow}{if} (tabDeCourant[i]==tabDeCourant[i+1]-\/1)\{ \textcolor{comment}{// vérification que la valeur de la cellule i soit égale à al valeur de la vellule i+1 retrancher 1}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00441}00441                 compt1= compt1 + 1; \textcolor{comment}{// si oui incrémntation du compteur }}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00442}00442             \}    }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00443}00443         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00444}00444         \textcolor{keywordflow}{if} (compt1>=3)\{ \textcolor{comment}{// vérification que que la valeur du commpteur soit supérieur ou égal à 3}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00445}00445             somme = \mbox{\hyperlink{_yams_8c_a37a457f9195991b618345ff5ef65e32d}{PETITE\_SUITE}}; \textcolor{comment}{// somme prend la valeur de la constante PETITE\_SUITE}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00446}00446         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tabJ[10]==-\/1)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00447}00447             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00448}00448         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00449}00449             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00450}00450         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00451}00451         tabJ[10]=somme; \textcolor{comment}{// insertion de la somme dans la cellule prévue}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00452}00452         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00453}00453     \textcolor{keywordflow}{case} 12:}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00454}00454         \mbox{\hyperlink{_yams_8c_ad162eb6a809950181446b7a5d281bc5b}{triSelection}}(tabDeCourant); \textcolor{comment}{// tri le tableau courant des dés par séléction et par ordre croissant}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00455}00455         \textcolor{keywordflow}{for} (i = 0; i < \mbox{\hyperlink{_yams_8c_adadf5510efdc685ee52ae5ba2d6b2cbb}{MAX\_DE}}; i++)\{ \textcolor{comment}{// boucle qui parcoure le tableau}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00456}00456             \textcolor{keywordflow}{if} (tabDeCourant[i]==tabDeCourant[i+1]-\/1)\{ \textcolor{comment}{// vérification que la cellule i du tableau est égale à la cellule i+1 retrancher 1}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00457}00457                 compt1= compt1 + 1; \textcolor{comment}{// si oui incrémntation du compteur}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00458}00458             \}    }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00459}00459         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00460}00460         \textcolor{keywordflow}{if} (compt1>=4)\{ \textcolor{comment}{// le le compteur est supérieur ou égal à 4}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00461}00461             somme = \mbox{\hyperlink{_yams_8c_ab89cb6caf072b94e7dd8dbed903d4528}{GRANDE\_SUITE}}; \textcolor{comment}{// somme es égal à la valeur de la consatnte GRNDE\_SUITE}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00462}00462         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tabJ[11]==-\/1)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00463}00463             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00464}00464         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00465}00465             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00466}00466         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00467}00467         tabJ[11]=somme; \textcolor{comment}{// insertion de la somme dans la cellule prévue}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00468}00468         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00469}00469     \textcolor{keywordflow}{case} 13:}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00470}00470         \textcolor{keywordflow}{for} (i = 0; i < \mbox{\hyperlink{_yams_8c_adadf5510efdc685ee52ae5ba2d6b2cbb}{MAX\_DE}}; i++)\{ \textcolor{comment}{// boucle qui parcour le tableau}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00471}00471             \textcolor{keywordflow}{if} (tabDeCourant[i]==tabDeCourant[i+1])\{ \textcolor{comment}{// vérification pour savoir si la valeur de la cellule i est égale à celle de la cellule i+1}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00472}00472                 compt1 = compt1 +1; \textcolor{comment}{// incrémentation du ompteur }}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00473}00473             \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00474}00474         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00475}00475         \textcolor{keywordflow}{if} (compt1==4)\{ \textcolor{comment}{// vériiaction que le compteur soit égale à 4}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00476}00476             somme = \mbox{\hyperlink{_yams_8c_a064740c1e92ebde1a0fccd5f6b74d9bf}{YAMS}}; \textcolor{comment}{// si oui somme prend la valeur de la constante YAMS}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00477}00477         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tabJ[12]==-\/1)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00478}00478             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00479}00479         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00480}00480             somme=-\/1;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00481}00481         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00482}00482         tabJ[12]=somme; \textcolor{comment}{// insetion de la somme dans la cellule prévue}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00483}00483         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00484}00484     \textcolor{keywordflow}{case} 14:}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00485}00485         \textcolor{keywordflow}{for} (i = 0; i < \mbox{\hyperlink{_yams_8c_adadf5510efdc685ee52ae5ba2d6b2cbb}{MAX\_DE}}; i++)\{ \textcolor{comment}{// boucle qui parcours le tableau}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00486}00486             somme=somme+tabDeCourant[i]; \textcolor{comment}{// somme de toutes les valeurs des cellules du taleau}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00487}00487         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00488}00488         tabJ[13]=somme; \textcolor{comment}{// insertion de la somme dans la cellule prévue}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00489}00489         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00490}00490     \textcolor{keywordflow}{default}: \textcolor{comment}{// en cas d'erreur et de valeurs autre que celle du switch relancé la procédure}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00491}00491         \mbox{\hyperlink{_yams_8c_a5821c116cfddd307af269465ad0fa491}{affecterScore}}(pseudo,tabJ,tabDeCourant); }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00492}00492         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00493}00493     \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00494}00494 \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00495}00495 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00504}\mbox{\hyperlink{_yams_8c_a9d68003c3e32ad77413c8395a10b9f6c}{00504}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_yams_8c_ae21e9b2fae90f2148a0d035f633396cf}{afficherScore}}(\textcolor{keywordtype}{char} pseudo1[7],\textcolor{keywordtype}{char} pseudo2[7],\mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}} j1,\mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}} j2)\{ }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00505}00505     \textcolor{keywordtype}{int} sommej1=0,sommej2=0;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00506}00506     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{_yams_8c_a0240ac851181b84ac374872dc5434ee4}{N}}; i++)\{ \textcolor{comment}{// boucle qui parcours les tableaux}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00507}00507         \textcolor{keywordflow}{if} (j1[i]!=-\/1 \&\& j2[i]!=-\/1)\{ \textcolor{comment}{// vérification que les 2 cellules des tableaux des joeuurs ne soit pas blocké}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00508}00508             sommej1 = sommej1 + j1[i];}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00509}00509             sommej2 = sommej2 + j2[i];}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00510}00510         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (j1[i]==-\/1 \&\& j2[i]!=-\/1)\{ \textcolor{comment}{// vérification que la cellule du joueur 1 soit blocké}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00511}00511             sommej2 = sommej2 + j2[i];}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00512}00512         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (j1[i]!=-\/1 \&\& j2[i]==-\/1)\{ \textcolor{comment}{// vérification que la cellule du joueur 2 soit blocké}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00513}00513             sommej1 = sommej1 + j1[i];}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00514}00514         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00515}00515     \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00516}00516     \textcolor{keywordflow}{if} (sommej1>sommej2)\{ \textcolor{comment}{// vérification que le score total du joueur 1 est supérieur au score total du joueur 2}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00517}00517         printf(\textcolor{stringliteral}{"{}Le vainqueur est le joueur 1 avec \%d comme score !\(\backslash\)n"{}},sommej1);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00518}00518         printf(\textcolor{stringliteral}{"{}Le perdant est le joueur 2 avec \%d comme score !\(\backslash\)n"{}},sommej2);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00519}00519     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (sommej1<sommej2)\{ \textcolor{comment}{// vérification que le score total du joueur 2 est supérieur au score total du joueur 1}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00520}00520         printf(\textcolor{stringliteral}{"{}Le vainqueur est le joueur 2 avec \%d comme score !\(\backslash\)n"{}},sommej2);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00521}00521         printf(\textcolor{stringliteral}{"{}Le perdant est le joueur 1 avec \%d comme score !\(\backslash\)n"{}},sommej1);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00522}00522     \}\textcolor{keywordflow}{else}\{ \textcolor{comment}{// sinon dire qu'il a égalité}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00523}00523         printf(\textcolor{stringliteral}{"{}C'est ne égalité tout les joueurs on \%d comme score\(\backslash\)n"{}},sommej1);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00524}00524     \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00525}00525 \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00526}00526 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00533}\mbox{\hyperlink{_yams_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{00533}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_yams_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00534}00534     \textcolor{keywordtype}{char} pseudo1[7]; }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00535}00535     \textcolor{keywordtype}{char} pseudo2[7];}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00536}00536     \textcolor{keywordtype}{char} rep;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00537}00537     \textcolor{keywordtype}{int} i,essaie;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00538}00538     \textcolor{keywordtype}{int} reponse;}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00539}00539     \mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}} tabJ1 = \{\};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00540}00540     \mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}} tabJ2 = \{\};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00541}00541     \mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}} tabDeCourant = \{\};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00542}00542     \mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}} tabDeRetenue = \{\};}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00543}00543     \mbox{\hyperlink{_yams_8c_a7bbe66524593a94e6027fe6aff306715}{fpseudo}}(pseudo1); \textcolor{comment}{// affectation du pseudo 1}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00544}00544     \mbox{\hyperlink{_yams_8c_a7bbe66524593a94e6027fe6aff306715}{fpseudo}}(pseudo2); \textcolor{comment}{// affectation du pseudo 2}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00545}00545     \mbox{\hyperlink{_yams_8c_a1dbaade02a2afb469e55c7fc047b9635}{init\_TabJ}}(tabJ1); \textcolor{comment}{// initialisation du tableau des scores du joueur 1}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00546}00546     \mbox{\hyperlink{_yams_8c_a1dbaade02a2afb469e55c7fc047b9635}{init\_TabJ}}(tabJ2); \textcolor{comment}{// initialisation du tableau des scores du joueur 2}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00547}00547     \mbox{\hyperlink{_yams_8c_ae51d40aa1b71f064dcd49e8a03ba172e}{init\_TabD}}(tabDeCourant); \textcolor{comment}{// initialisation du tableau des dés courants}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00548}00548     \mbox{\hyperlink{_yams_8c_ae51d40aa1b71f064dcd49e8a03ba172e}{init\_TabD}}(tabDeRetenue); \textcolor{comment}{// initialisation du tableau des dés retenues}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00549}00549     \textcolor{keywordflow}{for} (i = 0; i < \mbox{\hyperlink{_yams_8c_a1b6c75dce035faca03f2ae5a45821d26}{TOUR\_MAX}}; i++)\{ \textcolor{comment}{// boucle représentant les 13 tours de jeux }}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00550}00550         printf(\textcolor{stringliteral}{"{}tours \%d\(\backslash\)n"{}},i+1);}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00551}00551         \mbox{\hyperlink{_yams_8c_a397c3308d76235c86a4233fb08436d70}{afficheGrille}}(pseudo1,pseudo2,tabJ1,tabJ2); \textcolor{comment}{// affiche la grille des scores}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00552}00552         \textcolor{keywordflow}{do}\{ \textcolor{comment}{// vérification que le joueurs veuillez bien lancé les dés}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00553}00553             rep = \mbox{\hyperlink{_yams_8c_a51fe67d2bdad0debe4720ab4da5f3055}{proposeLanceDe}}(pseudo1); \textcolor{comment}{// rep prend la valeurs retourné par la fonction proposeLanceDe}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00554}00554         \} \textcolor{keywordflow}{while} (rep!=\textcolor{charliteral}{'o'});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00555}00555         \textcolor{keywordflow}{for} (essaie = 0; essaie < \mbox{\hyperlink{_yams_8c_af7dbda7167e22cb3417c16f78061ad80}{MAX}}; essaie++)\{ \textcolor{comment}{// boucle représentant les 3 essaies de lancement des dés du joueur lors de son tour}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00556}00556             \mbox{\hyperlink{_yams_8c_ab169282f210fdbf14fabd7793dd31c11}{pLanceDe}}(tabDeCourant,tabDeRetenue); \textcolor{comment}{// lancement des dés}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00557}00557             \textcolor{keywordflow}{if} (essaie<\mbox{\hyperlink{_yams_8c_af7dbda7167e22cb3417c16f78061ad80}{MAX}}-\/1)\{ \textcolor{comment}{// vérification que le joueur n'est pas fait plus de 3 tours}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00558}00558                 \textcolor{keywordflow}{do}\{ \textcolor{comment}{// vérification que le joueur entre bien l'une des 3 posibilités du menus}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00559}00559                     \mbox{\hyperlink{_yams_8c_a3e8d8c117fcb4674199f8cea1254d781}{afficheMenu}}(\&reponse); \textcolor{comment}{// affiche le menu}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00560}00560                     \textcolor{keywordflow}{if} (reponse==1)\{ }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00561}00561                         essaie=\mbox{\hyperlink{_yams_8c_af7dbda7167e22cb3417c16f78061ad80}{MAX}}; \textcolor{comment}{// affecte essaie à la valeur de la constante MAX pour pouvoir sortir de la boucle}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00562}00562                     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (reponse==2)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00563}00563                         \mbox{\hyperlink{_yams_8c_acfa851f9aadddf90142b0346562d999d}{pChoisirDe}}(tabDeCourant,tabDeRetenue); \textcolor{comment}{// permet de choisir les dés à concerver}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00564}00564                     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (reponse==3)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00565}00565                         printf(\textcolor{stringliteral}{"{}Relance de tout les des...\(\backslash\)n\(\backslash\)n"{}}); }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00566}00566                     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00567}00567                         printf(\textcolor{stringliteral}{"{}Veuillez saisir une valeurs correct\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00568}00568                     \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00569}00569                 \} \textcolor{keywordflow}{while} (reponse!=1 \&\& reponse!=2 \&\& reponse!=3);      }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00570}00570             \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00571}00571         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00572}00572         \mbox{\hyperlink{_yams_8c_a5821c116cfddd307af269465ad0fa491}{affecterScore}}(pseudo1,tabJ1,tabDeCourant); \textcolor{comment}{// permet la demande de la ligne ou l'utilisateur veux entrer son score dans la grille des score}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00573}00573 }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00574}00574         \mbox{\hyperlink{_yams_8c_a397c3308d76235c86a4233fb08436d70}{afficheGrille}}(pseudo1,pseudo2,tabJ1,tabJ2); \textcolor{comment}{// affiche la grille des scores}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00575}00575         \textcolor{keywordflow}{do}\{ \textcolor{comment}{// vérification que le joueurs veuillez bien lancé les dés}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00576}00576             rep = \mbox{\hyperlink{_yams_8c_a51fe67d2bdad0debe4720ab4da5f3055}{proposeLanceDe}}(pseudo2); \textcolor{comment}{// rep prend la valeurs retourné par la fonction proposeLanceDe}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00577}00577         \} \textcolor{keywordflow}{while} (rep!=\textcolor{charliteral}{'o'});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00578}00578         \textcolor{keywordflow}{for} (essaie = 0; essaie < \mbox{\hyperlink{_yams_8c_af7dbda7167e22cb3417c16f78061ad80}{MAX}}; essaie++)\{ \textcolor{comment}{// boucle représentant les 3 essaies de lancement des dés du joueur lors de son tour}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00579}00579             \mbox{\hyperlink{_yams_8c_ab169282f210fdbf14fabd7793dd31c11}{pLanceDe}}(tabDeCourant,tabDeRetenue); \textcolor{comment}{// lancement des dés}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00580}00580             \textcolor{keywordflow}{if} (essaie<\mbox{\hyperlink{_yams_8c_af7dbda7167e22cb3417c16f78061ad80}{MAX}}-\/1)\{ \textcolor{comment}{// vérification que le joueur n'est pas fait plus de 3 tours}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00581}00581                 \textcolor{keywordflow}{do}\{ \textcolor{comment}{// vérification que le joueur entre bien l'une des 3 posibilités du menus}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00582}00582                     \mbox{\hyperlink{_yams_8c_a3e8d8c117fcb4674199f8cea1254d781}{afficheMenu}}(\&reponse); \textcolor{comment}{// affiche le menu}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00583}00583                     \textcolor{keywordflow}{if} (reponse==1)\{ }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00584}00584                         essaie=\mbox{\hyperlink{_yams_8c_af7dbda7167e22cb3417c16f78061ad80}{MAX}}; \textcolor{comment}{// affecte essaie à la valeur de la constante MAX pour pouvoir sortir de la boucle}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00585}00585                     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (reponse==2)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00586}00586                         \mbox{\hyperlink{_yams_8c_acfa851f9aadddf90142b0346562d999d}{pChoisirDe}}(tabDeCourant,tabDeRetenue); \textcolor{comment}{// permet de choisir les dés à concerver}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00587}00587                     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (reponse==3)\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00588}00588                         printf(\textcolor{stringliteral}{"{}Relance de tout les des...\(\backslash\)n\(\backslash\)n"{}}); }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00589}00589                     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00590}00590                         printf(\textcolor{stringliteral}{"{}Veuillez saisir une valeurs correct\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00591}00591                     \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00592}00592                 \} \textcolor{keywordflow}{while} (reponse!=1 \&\& reponse!=2 \&\& reponse!=3);      }
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00593}00593             \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00594}00594         \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00595}00595         \mbox{\hyperlink{_yams_8c_a5821c116cfddd307af269465ad0fa491}{affecterScore}}(pseudo2,tabJ2,tabDeCourant); \textcolor{comment}{// permet la demande de la ligne ou l'utilisateur veux entrer son score dans la grille des score}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00596}00596     \}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00597}00597     \mbox{\hyperlink{_yams_8c_ae21e9b2fae90f2148a0d035f633396cf}{afficherScore}}(pseudo1,pseudo2,tabJ1,tabJ2); \textcolor{comment}{// permet d'afficher le vainqueur avec la grille des score}}
+\DoxyCodeLine{\Hypertarget{_yams_8c_source_l00598}00598 \}}
+
+\end{DoxyCode}

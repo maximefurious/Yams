@@ -1,0 +1,1049 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>YAMS: Référence du fichier Yams.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">YAMS<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Documentation du projet YAMS en sae</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier Yams.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Documentation doxygen du fichier <a class="el" href="_yams_8c.html" title="Documentation doxygen du fichier Yams.c.">Yams.c</a>.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:af316c33cc298530f245e8b55330e86b5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#af316c33cc298530f245e8b55330e86b5">D</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:af316c33cc298530f245e8b55330e86b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">définition de la taille D d'un tableau  <a href="_yams_8c.html#af316c33cc298530f245e8b55330e86b5">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af316c33cc298530f245e8b55330e86b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0240ac851181b84ac374872dc5434ee4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>&#160;&#160;&#160;14</td></tr>
+<tr class="memdesc:a0240ac851181b84ac374872dc5434ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">définition de la taille N d'un tableau  <a href="_yams_8c.html#a0240ac851181b84ac374872dc5434ee4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0240ac851181b84ac374872dc5434ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:aba32e6381c5a2907eeaca2ea33e88fd2"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#aba32e6381c5a2907eeaca2ea33e88fd2">de</a>[<a class="el" href="_yams_8c.html#af316c33cc298530f245e8b55330e86b5">D</a>]</td></tr>
+<tr class="memdesc:aba32e6381c5a2907eeaca2ea33e88fd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">type tableau d'un tableau de D entier  <a href="_yams_8c.html#aba32e6381c5a2907eeaca2ea33e88fd2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aba32e6381c5a2907eeaca2ea33e88fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebb6bb792135b158e9797ba38efa8a24"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#aebb6bb792135b158e9797ba38efa8a24">score</a>[<a class="el" href="_yams_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>]</td></tr>
+<tr class="memdesc:aebb6bb792135b158e9797ba38efa8a24"><td class="mdescLeft">&#160;</td><td class="mdescRight">type tableau d'un tableau de N entier  <a href="_yams_8c.html#aebb6bb792135b158e9797ba38efa8a24">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aebb6bb792135b158e9797ba38efa8a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a42341aa79e61b1d0862e31b4c8737135"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#a42341aa79e61b1d0862e31b4c8737135">affecterScore</a> (char pseudo[7], <a class="el" href="_yams_8c.html#aebb6bb792135b158e9797ba38efa8a24">score</a> tabJ, <a class="el" href="_yams_8c.html#aba32e6381c5a2907eeaca2ea33e88fd2">de</a> tabDeCourant)</td></tr>
+<tr class="memdesc:a42341aa79e61b1d0862e31b4c8737135"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure permettant l'affectation du score du joueur courant dans le tableau du joueur courant.  <a href="_yams_8c.html#a42341aa79e61b1d0862e31b4c8737135">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a42341aa79e61b1d0862e31b4c8737135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5821c116cfddd307af269465ad0fa491"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#a5821c116cfddd307af269465ad0fa491">affecterScore</a> (char[7], int[], int[])</td></tr>
+<tr class="separator:a5821c116cfddd307af269465ad0fa491"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac69ca8fb94ded0027bb185d61bfff12d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#ac69ca8fb94ded0027bb185d61bfff12d">afficheGrille</a> (char pseudo1[7], char pseudo2[7], <a class="el" href="_yams_8c.html#aebb6bb792135b158e9797ba38efa8a24">score</a> j1, <a class="el" href="_yams_8c.html#aebb6bb792135b158e9797ba38efa8a24">score</a> j2)</td></tr>
+<tr class="memdesc:ac69ca8fb94ded0027bb185d61bfff12d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure qui affiche la feuille de mark de la partie.  <a href="_yams_8c.html#ac69ca8fb94ded0027bb185d61bfff12d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac69ca8fb94ded0027bb185d61bfff12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a397c3308d76235c86a4233fb08436d70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#a397c3308d76235c86a4233fb08436d70">afficheGrille</a> (char[7], char[7], int[], int[])</td></tr>
+<tr class="separator:a397c3308d76235c86a4233fb08436d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8d8c117fcb4674199f8cea1254d781"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#a3e8d8c117fcb4674199f8cea1254d781">afficheMenu</a> (int *reponse)</td></tr>
+<tr class="memdesc:a3e8d8c117fcb4674199f8cea1254d781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure qui affiche le menu permettant au joueur de choisir après son lancement de dé  <a href="_yams_8c.html#a3e8d8c117fcb4674199f8cea1254d781">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3e8d8c117fcb4674199f8cea1254d781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d68003c3e32ad77413c8395a10b9f6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#a9d68003c3e32ad77413c8395a10b9f6c">afficherScore</a> (char pseudo1[7], char pseudo2[7], <a class="el" href="_yams_8c.html#aebb6bb792135b158e9797ba38efa8a24">score</a> j1, <a class="el" href="_yams_8c.html#aebb6bb792135b158e9797ba38efa8a24">score</a> j2)</td></tr>
+<tr class="memdesc:a9d68003c3e32ad77413c8395a10b9f6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure permettant d'afficher le vainqueur après une partie de YAMS.  <a href="_yams_8c.html#a9d68003c3e32ad77413c8395a10b9f6c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9d68003c3e32ad77413c8395a10b9f6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae21e9b2fae90f2148a0d035f633396cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#ae21e9b2fae90f2148a0d035f633396cf">afficherScore</a> (char[7], char[7], int[], int[])</td></tr>
+<tr class="separator:ae21e9b2fae90f2148a0d035f633396cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bbe66524593a94e6027fe6aff306715"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#a7bbe66524593a94e6027fe6aff306715">fpseudo</a> (char pseudo[7])</td></tr>
+<tr class="memdesc:a7bbe66524593a94e6027fe6aff306715"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure qui demande la saisi du pseudo du joueur.  <a href="_yams_8c.html#a7bbe66524593a94e6027fe6aff306715">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7bbe66524593a94e6027fe6aff306715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaed202ae743e019fca22487470bc6d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#afaed202ae743e019fca22487470bc6d1">init_TabD</a> (<a class="el" href="_yams_8c.html#aba32e6381c5a2907eeaca2ea33e88fd2">de</a> tab)</td></tr>
+<tr class="memdesc:afaed202ae743e019fca22487470bc6d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure permettant l'initialisation à zéro de toutes les cellules du tableau des dés.  <a href="_yams_8c.html#afaed202ae743e019fca22487470bc6d1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afaed202ae743e019fca22487470bc6d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae51d40aa1b71f064dcd49e8a03ba172e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#ae51d40aa1b71f064dcd49e8a03ba172e">init_TabD</a> (int[])</td></tr>
+<tr class="separator:ae51d40aa1b71f064dcd49e8a03ba172e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dbaade02a2afb469e55c7fc047b9635"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#a1dbaade02a2afb469e55c7fc047b9635">init_TabJ</a> (int[])</td></tr>
+<tr class="separator:a1dbaade02a2afb469e55c7fc047b9635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecc9eb380dd5e923180fb2e19e31854a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#aecc9eb380dd5e923180fb2e19e31854a">init_TabJ</a> (<a class="el" href="_yams_8c.html#aebb6bb792135b158e9797ba38efa8a24">score</a> tab)</td></tr>
+<tr class="memdesc:aecc9eb380dd5e923180fb2e19e31854a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure permettant l'initialisation à zéro de toutes les cellules du tableau des scores.  <a href="_yams_8c.html#aecc9eb380dd5e923180fb2e19e31854a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aecc9eb380dd5e923180fb2e19e31854a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Programme principal.  <a href="_yams_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22fc1c793cddf5affc7dd7fdb887e9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#ab22fc1c793cddf5affc7dd7fdb887e9e">pChoisirDe</a> (<a class="el" href="_yams_8c.html#aba32e6381c5a2907eeaca2ea33e88fd2">de</a> tabDeCourant, <a class="el" href="_yams_8c.html#aba32e6381c5a2907eeaca2ea33e88fd2">de</a> tabDeRetenu)</td></tr>
+<tr class="memdesc:ab22fc1c793cddf5affc7dd7fdb887e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure qui permet de choisir les dés à conserver.  <a href="_yams_8c.html#ab22fc1c793cddf5affc7dd7fdb887e9e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab22fc1c793cddf5affc7dd7fdb887e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfa851f9aadddf90142b0346562d999d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#acfa851f9aadddf90142b0346562d999d">pChoisirDe</a> (int[], int[])</td></tr>
+<tr class="separator:acfa851f9aadddf90142b0346562d999d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbdc0d2d2f3ef58ed9ecb33330e8823b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#acbdc0d2d2f3ef58ed9ecb33330e8823b">pLanceDe</a> (<a class="el" href="_yams_8c.html#aba32e6381c5a2907eeaca2ea33e88fd2">de</a> tabDeCourant, <a class="el" href="_yams_8c.html#aba32e6381c5a2907eeaca2ea33e88fd2">de</a> tabDeRetenu)</td></tr>
+<tr class="memdesc:acbdc0d2d2f3ef58ed9ecb33330e8823b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure permettant de lancé les dés du joueur courant.  <a href="_yams_8c.html#acbdc0d2d2f3ef58ed9ecb33330e8823b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:acbdc0d2d2f3ef58ed9ecb33330e8823b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab169282f210fdbf14fabd7793dd31c11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#ab169282f210fdbf14fabd7793dd31c11">pLanceDe</a> (int[], int[])</td></tr>
+<tr class="separator:ab169282f210fdbf14fabd7793dd31c11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51fe67d2bdad0debe4720ab4da5f3055"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#a51fe67d2bdad0debe4720ab4da5f3055">proposeLanceDe</a> (char pseudo[7])</td></tr>
+<tr class="memdesc:a51fe67d2bdad0debe4720ab4da5f3055"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui demande à l'utilisateur s'il souhaite lancer les dés  <a href="_yams_8c.html#a51fe67d2bdad0debe4720ab4da5f3055">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a51fe67d2bdad0debe4720ab4da5f3055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a537fa638da0e01efa64b700640215d42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#a537fa638da0e01efa64b700640215d42">triSelection</a> (<a class="el" href="_yams_8c.html#aba32e6381c5a2907eeaca2ea33e88fd2">de</a> tabDeCourant)</td></tr>
+<tr class="memdesc:a537fa638da0e01efa64b700640215d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure de tri par selection par ordre croissant.  <a href="_yams_8c.html#a537fa638da0e01efa64b700640215d42">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a537fa638da0e01efa64b700640215d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad162eb6a809950181446b7a5d281bc5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#ad162eb6a809950181446b7a5d281bc5b">triSelection</a> (int[])</td></tr>
+<tr class="separator:ad162eb6a809950181446b7a5d281bc5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:af180638971a2b4529c0097c091b31cf2"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#af180638971a2b4529c0097c091b31cf2">BONUS</a> = 62</td></tr>
+<tr class="memdesc:af180638971a2b4529c0097c091b31cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">constante pour la Borne max de la cellule bonus  <a href="_yams_8c.html#af180638971a2b4529c0097c091b31cf2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af180638971a2b4529c0097c091b31cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10f68649bb3c79d75a65c6b6d5f4f0f5"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#a10f68649bb3c79d75a65c6b6d5f4f0f5">BORNE</a> = 7</td></tr>
+<tr class="memdesc:a10f68649bb3c79d75a65c6b6d5f4f0f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">constante pour la première partie de la grille des scores  <a href="_yams_8c.html#a10f68649bb3c79d75a65c6b6d5f4f0f5">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a10f68649bb3c79d75a65c6b6d5f4f0f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a668ed452f14c36df7dda48b4aa7018b1"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#a668ed452f14c36df7dda48b4aa7018b1">FULL_HOUSE</a> = 25</td></tr>
+<tr class="memdesc:a668ed452f14c36df7dda48b4aa7018b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">costante pour le score du full house  <a href="_yams_8c.html#a668ed452f14c36df7dda48b4aa7018b1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a668ed452f14c36df7dda48b4aa7018b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab89cb6caf072b94e7dd8dbed903d4528"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#ab89cb6caf072b94e7dd8dbed903d4528">GRANDE_SUITE</a> = 40</td></tr>
+<tr class="memdesc:ab89cb6caf072b94e7dd8dbed903d4528"><td class="mdescLeft">&#160;</td><td class="mdescRight">constante pour le score de la grande suite  <a href="_yams_8c.html#ab89cb6caf072b94e7dd8dbed903d4528">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab89cb6caf072b94e7dd8dbed903d4528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7dbda7167e22cb3417c16f78061ad80"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#af7dbda7167e22cb3417c16f78061ad80">MAX</a> = 3</td></tr>
+<tr class="memdesc:af7dbda7167e22cb3417c16f78061ad80"><td class="mdescLeft">&#160;</td><td class="mdescRight">constante pour le nombre d'essaie max  <a href="_yams_8c.html#af7dbda7167e22cb3417c16f78061ad80">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af7dbda7167e22cb3417c16f78061ad80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adadf5510efdc685ee52ae5ba2d6b2cbb"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#adadf5510efdc685ee52ae5ba2d6b2cbb">MAX_DE</a> = 5</td></tr>
+<tr class="memdesc:adadf5510efdc685ee52ae5ba2d6b2cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">constante pour le nombre maximal de dés  <a href="_yams_8c.html#adadf5510efdc685ee52ae5ba2d6b2cbb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adadf5510efdc685ee52ae5ba2d6b2cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37a457f9195991b618345ff5ef65e32d"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#a37a457f9195991b618345ff5ef65e32d">PETITE_SUITE</a> = 30</td></tr>
+<tr class="memdesc:a37a457f9195991b618345ff5ef65e32d"><td class="mdescLeft">&#160;</td><td class="mdescRight">constante pour le score de la petite suite  <a href="_yams_8c.html#a37a457f9195991b618345ff5ef65e32d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a37a457f9195991b618345ff5ef65e32d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cb8d8cadf7626fd6b4e2c4e1a001b24"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#a7cb8d8cadf7626fd6b4e2c4e1a001b24">PTS_BONUS</a> = 35</td></tr>
+<tr class="memdesc:a7cb8d8cadf7626fd6b4e2c4e1a001b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">constante pour le score de la cellule bonus  <a href="_yams_8c.html#a7cb8d8cadf7626fd6b4e2c4e1a001b24">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7cb8d8cadf7626fd6b4e2c4e1a001b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b6c75dce035faca03f2ae5a45821d26"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#a1b6c75dce035faca03f2ae5a45821d26">TOUR_MAX</a> = 13</td></tr>
+<tr class="memdesc:a1b6c75dce035faca03f2ae5a45821d26"><td class="mdescLeft">&#160;</td><td class="mdescRight">constante pour le nombre de tour max d'une partie de YAMS  <a href="_yams_8c.html#a1b6c75dce035faca03f2ae5a45821d26">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1b6c75dce035faca03f2ae5a45821d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a064740c1e92ebde1a0fccd5f6b74d9bf"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_yams_8c.html#a064740c1e92ebde1a0fccd5f6b74d9bf">YAMS</a> = 50</td></tr>
+<tr class="memdesc:a064740c1e92ebde1a0fccd5f6b74d9bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">constante pour le score du YAMS  <a href="_yams_8c.html#a064740c1e92ebde1a0fccd5f6b74d9bf">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a064740c1e92ebde1a0fccd5f6b74d9bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p >Documentation doxygen du fichier <a class="el" href="_yams_8c.html" title="Documentation doxygen du fichier Yams.c.">Yams.c</a>. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Maxime Boujeant </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2021-11-27</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2021 </dd></dl>
+</div><h2 class="groupheader">Documentation des macros</h2>
+<a id="af316c33cc298530f245e8b55330e86b5" name="af316c33cc298530f245e8b55330e86b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af316c33cc298530f245e8b55330e86b5">&#9670;&nbsp;</a></span>D</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define D&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>définition de la taille D d'un tableau </p>
+
+</div>
+</div>
+<a id="a0240ac851181b84ac374872dc5434ee4" name="a0240ac851181b84ac374872dc5434ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0240ac851181b84ac374872dc5434ee4">&#9670;&nbsp;</a></span>N</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define N&#160;&#160;&#160;14</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>définition de la taille N d'un tableau </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des définitions de type</h2>
+<a id="aba32e6381c5a2907eeaca2ea33e88fd2" name="aba32e6381c5a2907eeaca2ea33e88fd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba32e6381c5a2907eeaca2ea33e88fd2">&#9670;&nbsp;</a></span>de</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int de[<a class="el" href="_yams_8c.html#af316c33cc298530f245e8b55330e86b5">D</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>type tableau d'un tableau de D entier </p>
+
+</div>
+</div>
+<a id="aebb6bb792135b158e9797ba38efa8a24" name="aebb6bb792135b158e9797ba38efa8a24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebb6bb792135b158e9797ba38efa8a24">&#9670;&nbsp;</a></span>score</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int score[<a class="el" href="_yams_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>type tableau d'un tableau de N entier </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a42341aa79e61b1d0862e31b4c8737135" name="a42341aa79e61b1d0862e31b4c8737135"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42341aa79e61b1d0862e31b4c8737135">&#9670;&nbsp;</a></span>affecterScore() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void affecterScore </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>pseudo</em>[7], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_yams_8c.html#aebb6bb792135b158e9797ba38efa8a24">score</a>&#160;</td>
+          <td class="paramname"><em>tabJ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_yams_8c.html#aba32e6381c5a2907eeaca2ea33e88fd2">de</a>&#160;</td>
+          <td class="paramname"><em>tabDeCourant</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procédure permettant l'affectation du score du joueur courant dans le tableau du joueur courant. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pseudo</td><td>pseudo du joueur courant </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tabJ</td><td>tableau des scores du joueur courant </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tabDeCourant</td><td>tbleau des dés du joueur courant </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5821c116cfddd307af269465ad0fa491" name="a5821c116cfddd307af269465ad0fa491"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5821c116cfddd307af269465ad0fa491">&#9670;&nbsp;</a></span>affecterScore() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void affecterScore </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname">[7], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac69ca8fb94ded0027bb185d61bfff12d" name="ac69ca8fb94ded0027bb185d61bfff12d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac69ca8fb94ded0027bb185d61bfff12d">&#9670;&nbsp;</a></span>afficheGrille() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficheGrille </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>pseudo1</em>[7], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>pseudo2</em>[7], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_yams_8c.html#aebb6bb792135b158e9797ba38efa8a24">score</a>&#160;</td>
+          <td class="paramname"><em>j1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_yams_8c.html#aebb6bb792135b158e9797ba38efa8a24">score</a>&#160;</td>
+          <td class="paramname"><em>j2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procédure qui affiche la feuille de mark de la partie. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pseudo1</td><td>pseudo du joueur 1 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pseudo2</td><td>pseudo du joueur 2 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">j1</td><td>tableau des scores du joueur 1 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">j2</td><td>tableau des scores du joueur 2 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a397c3308d76235c86a4233fb08436d70" name="a397c3308d76235c86a4233fb08436d70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a397c3308d76235c86a4233fb08436d70">&#9670;&nbsp;</a></span>afficheGrille() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficheGrille </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname">[7], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname">[7], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e8d8c117fcb4674199f8cea1254d781" name="a3e8d8c117fcb4674199f8cea1254d781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e8d8c117fcb4674199f8cea1254d781">&#9670;&nbsp;</a></span>afficheMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficheMenu </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>reponse</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procédure qui affiche le menu permettant au joueur de choisir après son lancement de dé </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">reponse</td><td>entier signifiant le choix ou le joueur souhaite se diriger </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9d68003c3e32ad77413c8395a10b9f6c" name="a9d68003c3e32ad77413c8395a10b9f6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d68003c3e32ad77413c8395a10b9f6c">&#9670;&nbsp;</a></span>afficherScore() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficherScore </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>pseudo1</em>[7], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>pseudo2</em>[7], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_yams_8c.html#aebb6bb792135b158e9797ba38efa8a24">score</a>&#160;</td>
+          <td class="paramname"><em>j1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_yams_8c.html#aebb6bb792135b158e9797ba38efa8a24">score</a>&#160;</td>
+          <td class="paramname"><em>j2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procédure permettant d'afficher le vainqueur après une partie de YAMS. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pseudo1</td><td>pseudo du joueur 1 </td></tr>
+    <tr><td class="paramname">pseudo2</td><td>pseudo du joueur 2 </td></tr>
+    <tr><td class="paramname">j1</td><td>tableau des scores du joueur 1 </td></tr>
+    <tr><td class="paramname">j2</td><td>tableau des scores du joueur 2 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae21e9b2fae90f2148a0d035f633396cf" name="ae21e9b2fae90f2148a0d035f633396cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae21e9b2fae90f2148a0d035f633396cf">&#9670;&nbsp;</a></span>afficherScore() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficherScore </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname">[7], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname">[7], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7bbe66524593a94e6027fe6aff306715" name="a7bbe66524593a94e6027fe6aff306715"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bbe66524593a94e6027fe6aff306715">&#9670;&nbsp;</a></span>fpseudo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpseudo </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>pseudo</em>[7]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procédure qui demande la saisi du pseudo du joueur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">pseudo</td><td>pseudo du joueur courant </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afaed202ae743e019fca22487470bc6d1" name="afaed202ae743e019fca22487470bc6d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaed202ae743e019fca22487470bc6d1">&#9670;&nbsp;</a></span>init_TabD() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_TabD </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_yams_8c.html#aba32e6381c5a2907eeaca2ea33e88fd2">de</a>&#160;</td>
+          <td class="paramname"><em>tab</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procédure permettant l'initialisation à zéro de toutes les cellules du tableau des dés. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tab</td><td>tableau des scores du joueur </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae51d40aa1b71f064dcd49e8a03ba172e" name="ae51d40aa1b71f064dcd49e8a03ba172e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae51d40aa1b71f064dcd49e8a03ba172e">&#9670;&nbsp;</a></span>init_TabD() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_TabD </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1dbaade02a2afb469e55c7fc047b9635" name="a1dbaade02a2afb469e55c7fc047b9635"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dbaade02a2afb469e55c7fc047b9635">&#9670;&nbsp;</a></span>init_TabJ() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_TabJ </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aecc9eb380dd5e923180fb2e19e31854a" name="aecc9eb380dd5e923180fb2e19e31854a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc9eb380dd5e923180fb2e19e31854a">&#9670;&nbsp;</a></span>init_TabJ() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_TabJ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_yams_8c.html#aebb6bb792135b158e9797ba38efa8a24">score</a>&#160;</td>
+          <td class="paramname"><em>tab</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procédure permettant l'initialisation à zéro de toutes les cellules du tableau des scores. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tab</td><td>tableau des scores du joueur </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Programme principal. </p>
+<p >Programme principal permettant de jouez au yams grade au procdure et fonction ci-dessus ! </p>
+
+</div>
+</div>
+<a id="ab22fc1c793cddf5affc7dd7fdb887e9e" name="ab22fc1c793cddf5affc7dd7fdb887e9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab22fc1c793cddf5affc7dd7fdb887e9e">&#9670;&nbsp;</a></span>pChoisirDe() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pChoisirDe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_yams_8c.html#aba32e6381c5a2907eeaca2ea33e88fd2">de</a>&#160;</td>
+          <td class="paramname"><em>tabDeCourant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_yams_8c.html#aba32e6381c5a2907eeaca2ea33e88fd2">de</a>&#160;</td>
+          <td class="paramname"><em>tabDeRetenu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procédure qui permet de choisir les dés à conserver. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tabDeCourant</td><td>tableau des dés courant du joueur courant </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tabDeRetenu</td><td>tableau des dés retenue du joueur courant </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acfa851f9aadddf90142b0346562d999d" name="acfa851f9aadddf90142b0346562d999d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfa851f9aadddf90142b0346562d999d">&#9670;&nbsp;</a></span>pChoisirDe() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pChoisirDe </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acbdc0d2d2f3ef58ed9ecb33330e8823b" name="acbdc0d2d2f3ef58ed9ecb33330e8823b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbdc0d2d2f3ef58ed9ecb33330e8823b">&#9670;&nbsp;</a></span>pLanceDe() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pLanceDe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_yams_8c.html#aba32e6381c5a2907eeaca2ea33e88fd2">de</a>&#160;</td>
+          <td class="paramname"><em>tabDeCourant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_yams_8c.html#aba32e6381c5a2907eeaca2ea33e88fd2">de</a>&#160;</td>
+          <td class="paramname"><em>tabDeRetenu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procédure permettant de lancé les dés du joueur courant. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tabDeCourant</td><td>tableau des dés courant du joueur courant </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tabDeRetenu</td><td>tableau des dé retenue du joueur courant </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab169282f210fdbf14fabd7793dd31c11" name="ab169282f210fdbf14fabd7793dd31c11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab169282f210fdbf14fabd7793dd31c11">&#9670;&nbsp;</a></span>pLanceDe() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pLanceDe </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51fe67d2bdad0debe4720ab4da5f3055" name="a51fe67d2bdad0debe4720ab4da5f3055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51fe67d2bdad0debe4720ab4da5f3055">&#9670;&nbsp;</a></span>proposeLanceDe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char proposeLanceDe </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>pseudo</em>[7]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui demande à l'utilisateur s'il souhaite lancer les dés </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pseudo</td><td>pseudo du joueur courant </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>char </dd></dl>
+
+</div>
+</div>
+<a id="a537fa638da0e01efa64b700640215d42" name="a537fa638da0e01efa64b700640215d42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a537fa638da0e01efa64b700640215d42">&#9670;&nbsp;</a></span>triSelection() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void triSelection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_yams_8c.html#aba32e6381c5a2907eeaca2ea33e88fd2">de</a>&#160;</td>
+          <td class="paramname"><em>tabDeCourant</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procédure de tri par selection par ordre croissant. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tabDeCourant</td><td>tableau des dés courant du joueur courant </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad162eb6a809950181446b7a5d281bc5b" name="ad162eb6a809950181446b7a5d281bc5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad162eb6a809950181446b7a5d281bc5b">&#9670;&nbsp;</a></span>triSelection() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void triSelection </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="af180638971a2b4529c0097c091b31cf2" name="af180638971a2b4529c0097c091b31cf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af180638971a2b4529c0097c091b31cf2">&#9670;&nbsp;</a></span>BONUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BONUS = 62</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constante pour la Borne max de la cellule bonus </p>
+
+</div>
+</div>
+<a id="a10f68649bb3c79d75a65c6b6d5f4f0f5" name="a10f68649bb3c79d75a65c6b6d5f4f0f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10f68649bb3c79d75a65c6b6d5f4f0f5">&#9670;&nbsp;</a></span>BORNE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BORNE = 7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constante pour la première partie de la grille des scores </p>
+
+</div>
+</div>
+<a id="a668ed452f14c36df7dda48b4aa7018b1" name="a668ed452f14c36df7dda48b4aa7018b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a668ed452f14c36df7dda48b4aa7018b1">&#9670;&nbsp;</a></span>FULL_HOUSE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int FULL_HOUSE = 25</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>costante pour le score du full house </p>
+
+</div>
+</div>
+<a id="ab89cb6caf072b94e7dd8dbed903d4528" name="ab89cb6caf072b94e7dd8dbed903d4528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab89cb6caf072b94e7dd8dbed903d4528">&#9670;&nbsp;</a></span>GRANDE_SUITE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int GRANDE_SUITE = 40</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constante pour le score de la grande suite </p>
+
+</div>
+</div>
+<a id="af7dbda7167e22cb3417c16f78061ad80" name="af7dbda7167e22cb3417c16f78061ad80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7dbda7167e22cb3417c16f78061ad80">&#9670;&nbsp;</a></span>MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int MAX = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constante pour le nombre d'essaie max </p>
+
+</div>
+</div>
+<a id="adadf5510efdc685ee52ae5ba2d6b2cbb" name="adadf5510efdc685ee52ae5ba2d6b2cbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adadf5510efdc685ee52ae5ba2d6b2cbb">&#9670;&nbsp;</a></span>MAX_DE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int MAX_DE = 5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constante pour le nombre maximal de dés </p>
+
+</div>
+</div>
+<a id="a37a457f9195991b618345ff5ef65e32d" name="a37a457f9195991b618345ff5ef65e32d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37a457f9195991b618345ff5ef65e32d">&#9670;&nbsp;</a></span>PETITE_SUITE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int PETITE_SUITE = 30</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constante pour le score de la petite suite </p>
+
+</div>
+</div>
+<a id="a7cb8d8cadf7626fd6b4e2c4e1a001b24" name="a7cb8d8cadf7626fd6b4e2c4e1a001b24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cb8d8cadf7626fd6b4e2c4e1a001b24">&#9670;&nbsp;</a></span>PTS_BONUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int PTS_BONUS = 35</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constante pour le score de la cellule bonus </p>
+
+</div>
+</div>
+<a id="a1b6c75dce035faca03f2ae5a45821d26" name="a1b6c75dce035faca03f2ae5a45821d26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b6c75dce035faca03f2ae5a45821d26">&#9670;&nbsp;</a></span>TOUR_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int TOUR_MAX = 13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constante pour le nombre de tour max d'une partie de YAMS </p>
+
+</div>
+</div>
+<a id="a064740c1e92ebde1a0fccd5f6b74d9bf" name="a064740c1e92ebde1a0fccd5f6b74d9bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a064740c1e92ebde1a0fccd5f6b74d9bf">&#9670;&nbsp;</a></span>YAMS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int YAMS = 50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constante pour le score du YAMS </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

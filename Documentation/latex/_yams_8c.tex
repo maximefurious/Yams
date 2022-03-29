@@ -1,0 +1,506 @@
+\hypertarget{_yams_8c}{}\doxysection{Référence du fichier Yams.\+c}
+\label{_yams_8c}\index{Yams.c@{Yams.c}}
+
+
+Documentation doxygen du fichier \mbox{\hyperlink{_yams_8c}{Yams.\+c}}.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_yams_8c_af316c33cc298530f245e8b55330e86b5}{D}}~5
+\begin{DoxyCompactList}\small\item\em définition de la taille D d\textquotesingle{}un tableau \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_yams_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~14
+\begin{DoxyCompactList}\small\item\em définition de la taille N d\textquotesingle{}un tableau \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}}\mbox{[}\mbox{\hyperlink{_yams_8c_af316c33cc298530f245e8b55330e86b5}{D}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em type tableau d\textquotesingle{}un tableau de D entier \end{DoxyCompactList}\item 
+typedef int \mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}}\mbox{[}\mbox{\hyperlink{_yams_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em type tableau d\textquotesingle{}un tableau de N entier \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_yams_8c_a42341aa79e61b1d0862e31b4c8737135}{affecter\+Score}} (char pseudo\mbox{[}7\mbox{]}, \mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}} tabJ, \mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}} tab\+De\+Courant)
+\begin{DoxyCompactList}\small\item\em Procédure permettant l\textquotesingle{}affectation du score du joueur courant dans le tableau du joueur courant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_yams_8c_a5821c116cfddd307af269465ad0fa491}{affecter\+Score}} (char\mbox{[}7\mbox{]}, int\mbox{[}$\,$\mbox{]}, int\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{_yams_8c_ac69ca8fb94ded0027bb185d61bfff12d}{affiche\+Grille}} (char pseudo1\mbox{[}7\mbox{]}, char pseudo2\mbox{[}7\mbox{]}, \mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}} j1, \mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}} j2)
+\begin{DoxyCompactList}\small\item\em Procédure qui affiche la feuille de mark de la partie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_yams_8c_a397c3308d76235c86a4233fb08436d70}{affiche\+Grille}} (char\mbox{[}7\mbox{]}, char\mbox{[}7\mbox{]}, int\mbox{[}$\,$\mbox{]}, int\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{_yams_8c_a3e8d8c117fcb4674199f8cea1254d781}{affiche\+Menu}} (int $\ast$reponse)
+\begin{DoxyCompactList}\small\item\em Procédure qui affiche le menu permettant au joueur de choisir après son lancement de dé \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_yams_8c_a9d68003c3e32ad77413c8395a10b9f6c}{afficher\+Score}} (char pseudo1\mbox{[}7\mbox{]}, char pseudo2\mbox{[}7\mbox{]}, \mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}} j1, \mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}} j2)
+\begin{DoxyCompactList}\small\item\em Procédure permettant d\textquotesingle{}afficher le vainqueur après une partie de YAMS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_yams_8c_ae21e9b2fae90f2148a0d035f633396cf}{afficher\+Score}} (char\mbox{[}7\mbox{]}, char\mbox{[}7\mbox{]}, int\mbox{[}$\,$\mbox{]}, int\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{_yams_8c_a7bbe66524593a94e6027fe6aff306715}{fpseudo}} (char pseudo\mbox{[}7\mbox{]})
+\begin{DoxyCompactList}\small\item\em Procédure qui demande la saisi du pseudo du joueur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_yams_8c_afaed202ae743e019fca22487470bc6d1}{init\+\_\+\+TabD}} (\mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}} tab)
+\begin{DoxyCompactList}\small\item\em Procédure permettant l\textquotesingle{}initialisation à zéro de toutes les cellules du tableau des dés. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_yams_8c_ae51d40aa1b71f064dcd49e8a03ba172e}{init\+\_\+\+TabD}} (int\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{_yams_8c_a1dbaade02a2afb469e55c7fc047b9635}{init\+\_\+\+TabJ}} (int\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{_yams_8c_aecc9eb380dd5e923180fb2e19e31854a}{init\+\_\+\+TabJ}} (\mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}} tab)
+\begin{DoxyCompactList}\small\item\em Procédure permettant l\textquotesingle{}initialisation à zéro de toutes les cellules du tableau des scores. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_yams_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Programme principal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_yams_8c_ab22fc1c793cddf5affc7dd7fdb887e9e}{p\+Choisir\+De}} (\mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}} tab\+De\+Courant, \mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}} tab\+De\+Retenu)
+\begin{DoxyCompactList}\small\item\em Procédure qui permet de choisir les dés à conserver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_yams_8c_acfa851f9aadddf90142b0346562d999d}{p\+Choisir\+De}} (int\mbox{[}$\,$\mbox{]}, int\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{_yams_8c_acbdc0d2d2f3ef58ed9ecb33330e8823b}{p\+Lance\+De}} (\mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}} tab\+De\+Courant, \mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}} tab\+De\+Retenu)
+\begin{DoxyCompactList}\small\item\em Procédure permettant de lancé les dés du joueur courant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_yams_8c_ab169282f210fdbf14fabd7793dd31c11}{p\+Lance\+De}} (int\mbox{[}$\,$\mbox{]}, int\mbox{[}$\,$\mbox{]})
+\item 
+char \mbox{\hyperlink{_yams_8c_a51fe67d2bdad0debe4720ab4da5f3055}{propose\+Lance\+De}} (char pseudo\mbox{[}7\mbox{]})
+\begin{DoxyCompactList}\small\item\em fonction qui demande à l\textquotesingle{}utilisateur s\textquotesingle{}il souhaite lancer les dés \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_yams_8c_a537fa638da0e01efa64b700640215d42}{tri\+Selection}} (\mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}} tab\+De\+Courant)
+\begin{DoxyCompactList}\small\item\em Procédure de tri par selection par ordre croissant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_yams_8c_ad162eb6a809950181446b7a5d281bc5b}{tri\+Selection}} (int\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{_yams_8c_af180638971a2b4529c0097c091b31cf2}{BONUS}} = 62
+\begin{DoxyCompactList}\small\item\em constante pour la Borne max de la cellule bonus \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_yams_8c_a10f68649bb3c79d75a65c6b6d5f4f0f5}{BORNE}} = 7
+\begin{DoxyCompactList}\small\item\em constante pour la première partie de la grille des scores \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_yams_8c_a668ed452f14c36df7dda48b4aa7018b1}{FULL\+\_\+\+HOUSE}} = 25
+\begin{DoxyCompactList}\small\item\em costante pour le score du full house \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_yams_8c_ab89cb6caf072b94e7dd8dbed903d4528}{GRANDE\+\_\+\+SUITE}} = 40
+\begin{DoxyCompactList}\small\item\em constante pour le score de la grande suite \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_yams_8c_af7dbda7167e22cb3417c16f78061ad80}{MAX}} = 3
+\begin{DoxyCompactList}\small\item\em constante pour le nombre d\textquotesingle{}essaie max \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_yams_8c_adadf5510efdc685ee52ae5ba2d6b2cbb}{MAX\+\_\+\+DE}} = 5
+\begin{DoxyCompactList}\small\item\em constante pour le nombre maximal de dés \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_yams_8c_a37a457f9195991b618345ff5ef65e32d}{PETITE\+\_\+\+SUITE}} = 30
+\begin{DoxyCompactList}\small\item\em constante pour le score de la petite suite \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_yams_8c_a7cb8d8cadf7626fd6b4e2c4e1a001b24}{PTS\+\_\+\+BONUS}} = 35
+\begin{DoxyCompactList}\small\item\em constante pour le score de la cellule bonus \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_yams_8c_a1b6c75dce035faca03f2ae5a45821d26}{TOUR\+\_\+\+MAX}} = 13
+\begin{DoxyCompactList}\small\item\em constante pour le nombre de tour max d\textquotesingle{}une partie de YAMS \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_yams_8c_a064740c1e92ebde1a0fccd5f6b74d9bf}{YAMS}} = 50
+\begin{DoxyCompactList}\small\item\em constante pour le score du YAMS \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Documentation doxygen du fichier \mbox{\hyperlink{_yams_8c}{Yams.\+c}}. 
+
+\begin{DoxyAuthor}{Auteur}
+Maxime Boujeant 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2021-\/11-\/27
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Documentation des macros}
+\mbox{\Hypertarget{_yams_8c_af316c33cc298530f245e8b55330e86b5}\label{_yams_8c_af316c33cc298530f245e8b55330e86b5}} 
+\index{Yams.c@{Yams.c}!D@{D}}
+\index{D@{D}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{D}{D}}
+{\footnotesize\ttfamily \#define D~5}
+
+
+
+définition de la taille D d\textquotesingle{}un tableau 
+
+\mbox{\Hypertarget{_yams_8c_a0240ac851181b84ac374872dc5434ee4}\label{_yams_8c_a0240ac851181b84ac374872dc5434ee4}} 
+\index{Yams.c@{Yams.c}!N@{N}}
+\index{N@{N}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \#define N~14}
+
+
+
+définition de la taille N d\textquotesingle{}un tableau 
+
+
+
+\doxysubsection{Documentation des définitions de type}
+\mbox{\Hypertarget{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}\label{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}} 
+\index{Yams.c@{Yams.c}!de@{de}}
+\index{de@{de}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{de}{de}}
+{\footnotesize\ttfamily typedef int de\mbox{[}\mbox{\hyperlink{_yams_8c_af316c33cc298530f245e8b55330e86b5}{D}}\mbox{]}}
+
+
+
+type tableau d\textquotesingle{}un tableau de D entier 
+
+\mbox{\Hypertarget{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}\label{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}} 
+\index{Yams.c@{Yams.c}!score@{score}}
+\index{score@{score}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily typedef int score\mbox{[}\mbox{\hyperlink{_yams_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}}
+
+
+
+type tableau d\textquotesingle{}un tableau de N entier 
+
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{_yams_8c_a42341aa79e61b1d0862e31b4c8737135}\label{_yams_8c_a42341aa79e61b1d0862e31b4c8737135}} 
+\index{Yams.c@{Yams.c}!affecterScore@{affecterScore}}
+\index{affecterScore@{affecterScore}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{affecterScore()}{affecterScore()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void affecter\+Score (\begin{DoxyParamCaption}\item[{char}]{pseudo\mbox{[}7\mbox{]},  }\item[{\mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}}}]{tabJ,  }\item[{\mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}}}]{tab\+De\+Courant }\end{DoxyParamCaption})}
+
+
+
+Procédure permettant l\textquotesingle{}affectation du score du joueur courant dans le tableau du joueur courant. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em pseudo} & pseudo du joueur courant \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em tabJ} & tableau des scores du joueur courant \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em tab\+De\+Courant} & tbleau des dés du joueur courant \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_yams_8c_a5821c116cfddd307af269465ad0fa491}\label{_yams_8c_a5821c116cfddd307af269465ad0fa491}} 
+\index{Yams.c@{Yams.c}!affecterScore@{affecterScore}}
+\index{affecterScore@{affecterScore}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{affecterScore()}{affecterScore()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void affecter\+Score (\begin{DoxyParamCaption}\item[{char}]{\mbox{[}7\mbox{]},  }\item[{int}]{\mbox{[}$\,$\mbox{]},  }\item[{int}]{\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_yams_8c_ac69ca8fb94ded0027bb185d61bfff12d}\label{_yams_8c_ac69ca8fb94ded0027bb185d61bfff12d}} 
+\index{Yams.c@{Yams.c}!afficheGrille@{afficheGrille}}
+\index{afficheGrille@{afficheGrille}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{afficheGrille()}{afficheGrille()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void affiche\+Grille (\begin{DoxyParamCaption}\item[{char}]{pseudo1\mbox{[}7\mbox{]},  }\item[{char}]{pseudo2\mbox{[}7\mbox{]},  }\item[{\mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}}}]{j1,  }\item[{\mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}}}]{j2 }\end{DoxyParamCaption})}
+
+
+
+Procédure qui affiche la feuille de mark de la partie. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em pseudo1} & pseudo du joueur 1 \\
+\hline
+\mbox{\texttt{ in}}  & {\em pseudo2} & pseudo du joueur 2 \\
+\hline
+\mbox{\texttt{ in}}  & {\em j1} & tableau des scores du joueur 1 \\
+\hline
+\mbox{\texttt{ in}}  & {\em j2} & tableau des scores du joueur 2 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_yams_8c_a397c3308d76235c86a4233fb08436d70}\label{_yams_8c_a397c3308d76235c86a4233fb08436d70}} 
+\index{Yams.c@{Yams.c}!afficheGrille@{afficheGrille}}
+\index{afficheGrille@{afficheGrille}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{afficheGrille()}{afficheGrille()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void affiche\+Grille (\begin{DoxyParamCaption}\item[{char}]{\mbox{[}7\mbox{]},  }\item[{char}]{\mbox{[}7\mbox{]},  }\item[{int}]{\mbox{[}$\,$\mbox{]},  }\item[{int}]{\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_yams_8c_a3e8d8c117fcb4674199f8cea1254d781}\label{_yams_8c_a3e8d8c117fcb4674199f8cea1254d781}} 
+\index{Yams.c@{Yams.c}!afficheMenu@{afficheMenu}}
+\index{afficheMenu@{afficheMenu}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{afficheMenu()}{afficheMenu()}}
+{\footnotesize\ttfamily void affiche\+Menu (\begin{DoxyParamCaption}\item[{int $\ast$}]{reponse }\end{DoxyParamCaption})}
+
+
+
+Procédure qui affiche le menu permettant au joueur de choisir après son lancement de dé 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in,out}}  & {\em reponse} & entier signifiant le choix ou le joueur souhaite se diriger \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_yams_8c_a9d68003c3e32ad77413c8395a10b9f6c}\label{_yams_8c_a9d68003c3e32ad77413c8395a10b9f6c}} 
+\index{Yams.c@{Yams.c}!afficherScore@{afficherScore}}
+\index{afficherScore@{afficherScore}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{afficherScore()}{afficherScore()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void afficher\+Score (\begin{DoxyParamCaption}\item[{char}]{pseudo1\mbox{[}7\mbox{]},  }\item[{char}]{pseudo2\mbox{[}7\mbox{]},  }\item[{\mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}}}]{j1,  }\item[{\mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}}}]{j2 }\end{DoxyParamCaption})}
+
+
+
+Procédure permettant d\textquotesingle{}afficher le vainqueur après une partie de YAMS. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pseudo1} & pseudo du joueur 1 \\
+\hline
+{\em pseudo2} & pseudo du joueur 2 \\
+\hline
+{\em j1} & tableau des scores du joueur 1 \\
+\hline
+{\em j2} & tableau des scores du joueur 2 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_yams_8c_ae21e9b2fae90f2148a0d035f633396cf}\label{_yams_8c_ae21e9b2fae90f2148a0d035f633396cf}} 
+\index{Yams.c@{Yams.c}!afficherScore@{afficherScore}}
+\index{afficherScore@{afficherScore}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{afficherScore()}{afficherScore()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void afficher\+Score (\begin{DoxyParamCaption}\item[{char}]{\mbox{[}7\mbox{]},  }\item[{char}]{\mbox{[}7\mbox{]},  }\item[{int}]{\mbox{[}$\,$\mbox{]},  }\item[{int}]{\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_yams_8c_a7bbe66524593a94e6027fe6aff306715}\label{_yams_8c_a7bbe66524593a94e6027fe6aff306715}} 
+\index{Yams.c@{Yams.c}!fpseudo@{fpseudo}}
+\index{fpseudo@{fpseudo}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{fpseudo()}{fpseudo()}}
+{\footnotesize\ttfamily void fpseudo (\begin{DoxyParamCaption}\item[{char}]{pseudo\mbox{[}7\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Procédure qui demande la saisi du pseudo du joueur. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ out}}  & {\em pseudo} & pseudo du joueur courant \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_yams_8c_afaed202ae743e019fca22487470bc6d1}\label{_yams_8c_afaed202ae743e019fca22487470bc6d1}} 
+\index{Yams.c@{Yams.c}!init\_TabD@{init\_TabD}}
+\index{init\_TabD@{init\_TabD}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{init\_TabD()}{init\_TabD()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void init\+\_\+\+TabD (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}}}]{tab }\end{DoxyParamCaption})}
+
+
+
+Procédure permettant l\textquotesingle{}initialisation à zéro de toutes les cellules du tableau des dés. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in,out}}  & {\em tab} & tableau des scores du joueur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_yams_8c_ae51d40aa1b71f064dcd49e8a03ba172e}\label{_yams_8c_ae51d40aa1b71f064dcd49e8a03ba172e}} 
+\index{Yams.c@{Yams.c}!init\_TabD@{init\_TabD}}
+\index{init\_TabD@{init\_TabD}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{init\_TabD()}{init\_TabD()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void init\+\_\+\+TabD (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_yams_8c_a1dbaade02a2afb469e55c7fc047b9635}\label{_yams_8c_a1dbaade02a2afb469e55c7fc047b9635}} 
+\index{Yams.c@{Yams.c}!init\_TabJ@{init\_TabJ}}
+\index{init\_TabJ@{init\_TabJ}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{init\_TabJ()}{init\_TabJ()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void init\+\_\+\+TabJ (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_yams_8c_aecc9eb380dd5e923180fb2e19e31854a}\label{_yams_8c_aecc9eb380dd5e923180fb2e19e31854a}} 
+\index{Yams.c@{Yams.c}!init\_TabJ@{init\_TabJ}}
+\index{init\_TabJ@{init\_TabJ}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{init\_TabJ()}{init\_TabJ()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void init\+\_\+\+TabJ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_yams_8c_aebb6bb792135b158e9797ba38efa8a24}{score}}}]{tab }\end{DoxyParamCaption})}
+
+
+
+Procédure permettant l\textquotesingle{}initialisation à zéro de toutes les cellules du tableau des scores. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in,out}}  & {\em tab} & tableau des scores du joueur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_yams_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_yams_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Yams.c@{Yams.c}!main@{main}}
+\index{main@{main}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Programme principal. 
+
+Programme principal permettant de jouez au yams grade au procdure et fonction ci-\/dessus ! \mbox{\Hypertarget{_yams_8c_ab22fc1c793cddf5affc7dd7fdb887e9e}\label{_yams_8c_ab22fc1c793cddf5affc7dd7fdb887e9e}} 
+\index{Yams.c@{Yams.c}!pChoisirDe@{pChoisirDe}}
+\index{pChoisirDe@{pChoisirDe}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{pChoisirDe()}{pChoisirDe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void p\+Choisir\+De (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}}}]{tab\+De\+Courant,  }\item[{\mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}}}]{tab\+De\+Retenu }\end{DoxyParamCaption})}
+
+
+
+Procédure qui permet de choisir les dés à conserver. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in,out}}  & {\em tab\+De\+Courant} & tableau des dés courant du joueur courant \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em tab\+De\+Retenu} & tableau des dés retenue du joueur courant \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_yams_8c_acfa851f9aadddf90142b0346562d999d}\label{_yams_8c_acfa851f9aadddf90142b0346562d999d}} 
+\index{Yams.c@{Yams.c}!pChoisirDe@{pChoisirDe}}
+\index{pChoisirDe@{pChoisirDe}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{pChoisirDe()}{pChoisirDe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void p\+Choisir\+De (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}$\,$\mbox{]},  }\item[{int}]{\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_yams_8c_acbdc0d2d2f3ef58ed9ecb33330e8823b}\label{_yams_8c_acbdc0d2d2f3ef58ed9ecb33330e8823b}} 
+\index{Yams.c@{Yams.c}!pLanceDe@{pLanceDe}}
+\index{pLanceDe@{pLanceDe}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{pLanceDe()}{pLanceDe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void p\+Lance\+De (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}}}]{tab\+De\+Courant,  }\item[{\mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}}}]{tab\+De\+Retenu }\end{DoxyParamCaption})}
+
+
+
+Procédure permettant de lancé les dés du joueur courant. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in,out}}  & {\em tab\+De\+Courant} & tableau des dés courant du joueur courant \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em tab\+De\+Retenu} & tableau des dé retenue du joueur courant \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_yams_8c_ab169282f210fdbf14fabd7793dd31c11}\label{_yams_8c_ab169282f210fdbf14fabd7793dd31c11}} 
+\index{Yams.c@{Yams.c}!pLanceDe@{pLanceDe}}
+\index{pLanceDe@{pLanceDe}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{pLanceDe()}{pLanceDe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void p\+Lance\+De (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}$\,$\mbox{]},  }\item[{int}]{\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_yams_8c_a51fe67d2bdad0debe4720ab4da5f3055}\label{_yams_8c_a51fe67d2bdad0debe4720ab4da5f3055}} 
+\index{Yams.c@{Yams.c}!proposeLanceDe@{proposeLanceDe}}
+\index{proposeLanceDe@{proposeLanceDe}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{proposeLanceDe()}{proposeLanceDe()}}
+{\footnotesize\ttfamily char propose\+Lance\+De (\begin{DoxyParamCaption}\item[{char}]{pseudo\mbox{[}7\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+fonction qui demande à l\textquotesingle{}utilisateur s\textquotesingle{}il souhaite lancer les dés 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em pseudo} & pseudo du joueur courant \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+char 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_yams_8c_a537fa638da0e01efa64b700640215d42}\label{_yams_8c_a537fa638da0e01efa64b700640215d42}} 
+\index{Yams.c@{Yams.c}!triSelection@{triSelection}}
+\index{triSelection@{triSelection}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{triSelection()}{triSelection()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tri\+Selection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_yams_8c_aba32e6381c5a2907eeaca2ea33e88fd2}{de}}}]{tab\+De\+Courant }\end{DoxyParamCaption})}
+
+
+
+Procédure de tri par selection par ordre croissant. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in,out}}  & {\em tab\+De\+Courant} & tableau des dés courant du joueur courant \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_yams_8c_ad162eb6a809950181446b7a5d281bc5b}\label{_yams_8c_ad162eb6a809950181446b7a5d281bc5b}} 
+\index{Yams.c@{Yams.c}!triSelection@{triSelection}}
+\index{triSelection@{triSelection}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{triSelection()}{triSelection()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tri\+Selection (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentation des variables}
+\mbox{\Hypertarget{_yams_8c_af180638971a2b4529c0097c091b31cf2}\label{_yams_8c_af180638971a2b4529c0097c091b31cf2}} 
+\index{Yams.c@{Yams.c}!BONUS@{BONUS}}
+\index{BONUS@{BONUS}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{BONUS}{BONUS}}
+{\footnotesize\ttfamily const int BONUS = 62}
+
+
+
+constante pour la Borne max de la cellule bonus 
+
+\mbox{\Hypertarget{_yams_8c_a10f68649bb3c79d75a65c6b6d5f4f0f5}\label{_yams_8c_a10f68649bb3c79d75a65c6b6d5f4f0f5}} 
+\index{Yams.c@{Yams.c}!BORNE@{BORNE}}
+\index{BORNE@{BORNE}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{BORNE}{BORNE}}
+{\footnotesize\ttfamily const int BORNE = 7}
+
+
+
+constante pour la première partie de la grille des scores 
+
+\mbox{\Hypertarget{_yams_8c_a668ed452f14c36df7dda48b4aa7018b1}\label{_yams_8c_a668ed452f14c36df7dda48b4aa7018b1}} 
+\index{Yams.c@{Yams.c}!FULL\_HOUSE@{FULL\_HOUSE}}
+\index{FULL\_HOUSE@{FULL\_HOUSE}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{FULL\_HOUSE}{FULL\_HOUSE}}
+{\footnotesize\ttfamily const int FULL\+\_\+\+HOUSE = 25}
+
+
+
+costante pour le score du full house 
+
+\mbox{\Hypertarget{_yams_8c_ab89cb6caf072b94e7dd8dbed903d4528}\label{_yams_8c_ab89cb6caf072b94e7dd8dbed903d4528}} 
+\index{Yams.c@{Yams.c}!GRANDE\_SUITE@{GRANDE\_SUITE}}
+\index{GRANDE\_SUITE@{GRANDE\_SUITE}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{GRANDE\_SUITE}{GRANDE\_SUITE}}
+{\footnotesize\ttfamily const int GRANDE\+\_\+\+SUITE = 40}
+
+
+
+constante pour le score de la grande suite 
+
+\mbox{\Hypertarget{_yams_8c_af7dbda7167e22cb3417c16f78061ad80}\label{_yams_8c_af7dbda7167e22cb3417c16f78061ad80}} 
+\index{Yams.c@{Yams.c}!MAX@{MAX}}
+\index{MAX@{MAX}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{MAX}{MAX}}
+{\footnotesize\ttfamily const int MAX = 3}
+
+
+
+constante pour le nombre d\textquotesingle{}essaie max 
+
+\mbox{\Hypertarget{_yams_8c_adadf5510efdc685ee52ae5ba2d6b2cbb}\label{_yams_8c_adadf5510efdc685ee52ae5ba2d6b2cbb}} 
+\index{Yams.c@{Yams.c}!MAX\_DE@{MAX\_DE}}
+\index{MAX\_DE@{MAX\_DE}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_DE}{MAX\_DE}}
+{\footnotesize\ttfamily const int MAX\+\_\+\+DE = 5}
+
+
+
+constante pour le nombre maximal de dés 
+
+\mbox{\Hypertarget{_yams_8c_a37a457f9195991b618345ff5ef65e32d}\label{_yams_8c_a37a457f9195991b618345ff5ef65e32d}} 
+\index{Yams.c@{Yams.c}!PETITE\_SUITE@{PETITE\_SUITE}}
+\index{PETITE\_SUITE@{PETITE\_SUITE}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{PETITE\_SUITE}{PETITE\_SUITE}}
+{\footnotesize\ttfamily const int PETITE\+\_\+\+SUITE = 30}
+
+
+
+constante pour le score de la petite suite 
+
+\mbox{\Hypertarget{_yams_8c_a7cb8d8cadf7626fd6b4e2c4e1a001b24}\label{_yams_8c_a7cb8d8cadf7626fd6b4e2c4e1a001b24}} 
+\index{Yams.c@{Yams.c}!PTS\_BONUS@{PTS\_BONUS}}
+\index{PTS\_BONUS@{PTS\_BONUS}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{PTS\_BONUS}{PTS\_BONUS}}
+{\footnotesize\ttfamily const int PTS\+\_\+\+BONUS = 35}
+
+
+
+constante pour le score de la cellule bonus 
+
+\mbox{\Hypertarget{_yams_8c_a1b6c75dce035faca03f2ae5a45821d26}\label{_yams_8c_a1b6c75dce035faca03f2ae5a45821d26}} 
+\index{Yams.c@{Yams.c}!TOUR\_MAX@{TOUR\_MAX}}
+\index{TOUR\_MAX@{TOUR\_MAX}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{TOUR\_MAX}{TOUR\_MAX}}
+{\footnotesize\ttfamily const int TOUR\+\_\+\+MAX = 13}
+
+
+
+constante pour le nombre de tour max d\textquotesingle{}une partie de YAMS 
+
+\mbox{\Hypertarget{_yams_8c_a064740c1e92ebde1a0fccd5f6b74d9bf}\label{_yams_8c_a064740c1e92ebde1a0fccd5f6b74d9bf}} 
+\index{Yams.c@{Yams.c}!YAMS@{YAMS}}
+\index{YAMS@{YAMS}!Yams.c@{Yams.c}}
+\doxysubsubsection{\texorpdfstring{YAMS}{YAMS}}
+{\footnotesize\ttfamily const int YAMS = 50}
+
+
+
+constante pour le score du YAMS 
+
